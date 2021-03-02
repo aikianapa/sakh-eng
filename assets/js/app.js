@@ -344,5 +344,8 @@ $(function () {
             $(this).addClass('menu__tab--active');
         }
     });
-    $('body').addClass('loaded');
 });
+
+$(document).ready(function(){
+    $('body').addClass('loaded');
+})
