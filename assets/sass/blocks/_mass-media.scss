@@ -1,0 +1,43 @@
+.media__item {
+    display: flex;
+    position: relative;
+    padding: 30px 0;
+    border-bottom: $gray solid 1px;
+}
+.media__icon {
+    display: block;
+    margin-right: 16px;
+    width: 64px;
+    height: 64px;
+    background: $dark center no-repeat;
+}
+.media__info {
+    color: #FFFFFF;
+    font-size: 24px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+.media__date {
+    color: $gray;
+    font-size: 16px;
+}
+.media__descr {
+    width: 100%;
+}
+@media (max-width: 575px) {
+    .media__info {
+        font-size: 14px;
+    }
+    .media__date {
+        font-size: 12px;
+    }
+    .media__item {
+        padding: 15px 0;
+    }
+}

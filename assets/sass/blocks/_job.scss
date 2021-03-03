@@ -1,0 +1,37 @@
+.job__wrapper {
+    display: flex;
+}
+.job__contacts {
+    font-size: 14px;
+}
+.job__list {
+    margin-top: 50px;
+    max-width: 825px;
+}
+.job__item {
+    border-bottom: 1px solid $gray-block;
+    &:last-child {
+        border: none;
+    }
+}
+.job__title {
+    font-size: 24px;
+    margin: 50px 0 30px 0;
+}
+.job__descr {
+    font-size: 16px;
+    color: $gray;
+    margin-bottom: 20px;
+}
+.job__date {
+    margin-bottom: 50px;
+
+}
+.job__tel {
+    color: #FFF;
+}
+@media (max-width: 991px) {
+    .job__contacts {
+        width: 320px;
+    }
+  }

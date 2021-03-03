@@ -1,0 +1,86 @@
+.projects__list {
+    display: block;
+}
+
+.projects__item {
+    display: block;
+    position: relative;
+    padding: 80px 30px 50px;
+    overflow: hidden;
+    @media (max-width: 767px) {
+        padding: 60px 20px 40px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to top, $main-color 0%, transparent 100%);
+    }
+}
+
+.projects__name {
+    font-size: 64px;
+    line-height: 1.3;
+    color: #FFF;
+    position: relative;
+    left: -2px;
+    margin-bottom: 10px;
+    @media (max-width: 767px) {
+        font-size: 44px;
+        left: -1px;
+    }
+}
+
+.projects__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.projects__geo {
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #FFF;
+    margin-bottom: 20px;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        width: 16px;
+        height: 20px;
+        background: url(../img/icons/map.svg) center (center / cover) no-repeat;
+    }
+}
+
+.projects__date {
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #FFF;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        width: 16px;
+        height: 20px;
+        background: url(../img/icons/time.svg) center (center / cover) no-repeat;
+    }
+
+    span {
+        color: $gray;
+    }
+}

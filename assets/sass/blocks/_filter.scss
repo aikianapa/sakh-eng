@@ -1,0 +1,40 @@
+.filter {
+    max-width: 540px;
+    height: 380px;
+    background-color: $dark;
+    padding: 15px 10px 30px 30px;
+}
+.filter__close {
+    cursor: pointer;
+    padding-right: 20px;
+    position: relative;
+    text-align: right;
+    font-size: 14px;
+    color: $gray;
+    &::after, &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 14px;   
+        height: 1px; 
+        background-color: $gray;
+        transform: rotate(45deg);
+    }
+    &::before {
+        transform: rotate(-45deg);
+    }
+}
+.filter__title {
+    font-size: 24px;
+}
+.filter__descr {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 30px;
+}
+.filter__btn {
+    display: block;
+    margin: 5px 10px 0 auto;
+}

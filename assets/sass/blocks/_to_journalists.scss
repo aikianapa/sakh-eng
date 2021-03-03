@@ -1,0 +1,29 @@
+.to_journalists {
+   padding: 140px 0 290px 0; 
+}
+.to_journalists__title {
+    font-size: 64px;
+    text-align: center;
+}
+.to_journalists__descr {
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 20px;
+}
+.to_journalists__contact {
+    margin-top: 100px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray;
+}
+@media(max-width: 575px) {
+    .to_journalists {
+        padding: 130px 0 100px 0; 
+     }
+    .to_journalists__title {
+        font-size: 48px;
+    }
+    .to_journalists__descr {
+        padding: 0 15px;
+    }
+}

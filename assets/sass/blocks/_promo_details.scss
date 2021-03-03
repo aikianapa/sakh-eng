@@ -1,0 +1,54 @@
+.post__wrapper {
+    max-width: 835px;
+    margin: 0 auto;
+}
+.post__date {
+    font-size: 14px;
+    color: $gray;
+}
+.post__promo {
+    position: relative;
+    margin-top: 30px;
+    &::before {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "АКЦИЯ";
+        background-color: $red;
+        width: 77px;
+        height: 31px;
+    }
+}
+.post__img {
+    width: 100%;
+    margin: auto auto 50px auto;
+}
+.post__content {
+    margin-bottom: 30px;
+}
+.post__video {
+    margin-bottom: 30px;
+}
+.post__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.post__item {
+    display: block;
+    width: 255px;
+    height: 236px;
+}
+.post__tel {
+    margin: 50px 0 50px 0;
+    a {
+        color: #FFF;
+    }
+}
+.post__declaration {
+    margin: 20px 0 20px 0;
+    a {
+        color: #FFF;
+    }
+}
