@@ -33,7 +33,7 @@
 
 .approach__item {
     padding-top: 50px;
-    height: 220px;
+    height: 260px;
     background-color: rgba(49, 62, 84, 0.8);
     margin: 0 0 8px 0;
     text-align: center;
@@ -46,11 +46,11 @@
 .approach__item .circle {
     border: 1px solid white !important;
     border-radius: 50% !important;
-    width: 64px;
-    height: 64px;
+    width: 110px;
+    height: 110px;
     display: inline-block;
-    line-height: 64px;
-    font-size: 1.3rem;
+    line-height: 110px;
+    font-size: 40px;
 }
 
 .approach__img {
