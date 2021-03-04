@@ -213,6 +213,9 @@ body {
         background: $main-color;
         opacity: .9;
         z-index: 1;
+        @media (max-width: 767px) {
+            opacity: 0.3;
+        }
     }
     video {
         height: 100%;

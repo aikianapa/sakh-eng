@@ -3002,6 +3002,9 @@ html, body {
     background: #1F2A3C;
     opacity: 0.9;
     z-index: 1; }
+  @media (max-width: 767px) {
+    .screen__image:before {
+      opacity: 0.5; } }
   .screen__image video {
     height: 100%;
     width: 177.77777778vh;
