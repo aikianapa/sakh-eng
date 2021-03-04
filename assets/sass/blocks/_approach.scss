@@ -36,10 +36,20 @@
     height: 220px;
     background-color: rgba(49, 62, 84, 0.8);
     margin: 0 0 8px 0;
+    text-align: center;
     @media (max-width: 767px) {
         padding: 30px 0;
         height: auto;
     }
+}
+
+.approach__item .circle {
+    border: 1px solid white !important;
+    border-radius: 50% !important;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    line-height: 64px;
 }
 
 .approach__img {
