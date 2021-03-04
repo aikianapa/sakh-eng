@@ -8,6 +8,21 @@
     bottom: 0;
 }
 
+@media (max-width: 767px) {
+    .footer:before {
+        content: '';
+        display: block;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #1F2A3C;
+        opacity: 0.9;
+        z-index: 0;
+    }
+}
+
 .body-home {
     .footer {
         position: fixed;

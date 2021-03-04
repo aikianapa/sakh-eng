@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .btn {
   padding: 12px 30px;
   background-color: #C9002C;
@@ -19,10 +19,13 @@
 body {
   min-width: 350px;
   margin: 0;
-  font-family: 'Jura', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
   background: #1F2A3C;
   color: #FFFFFF;
   font-size: 16px; }
+  body h1, body h2, body h3, body h4, body h5 {
+    font-weight: 700; }
 
 a {
   color: #ADB2BB; }
@@ -2579,6 +2582,19 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   position: absolute;
   width: 100%;
   bottom: 0; }
+
+@media (max-width: 767px) {
+  .footer:before {
+    content: '';
+    display: block;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #1F2A3C;
+    opacity: 0.9;
+    z-index: 0; } }
 
 .body-home .footer {
   position: fixed;
