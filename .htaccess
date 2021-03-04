@@ -10,7 +10,7 @@ AddOutputFilter INCLUDES .html
 AddType text/html .php
 AddOutputFilter INCLUDES .php
 
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|webp|mp4|svg)$">
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|webp|mp4|webm|svg)$">
 Header set Cache-Control "max-age=31536000, public"
 </filesMatch>
 

@@ -3,13 +3,13 @@
             <div class="row">
                 <div class="col-md-6 col-lg">
                     <div class="footer__social">
-                        <a href="#" class="footer__item">Vkontakte</a>
-                        <a href="#" class="footer__item">Facebook</a>
-                        <a href="#" class="footer__item">instagram</a>
+                        <a href="#" rel="noreferrer" class="footer__item">Vkontakte</a>
+                        <a href="#" rel="noreferrer" class="footer__item">Facebook</a>
+                        <a href="#" rel="noreferrer" class="footer__item">instagram</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-auto col-xl-4">
-                    <a href="http://idees.ru/" class="footer__create" target="_blank">Создавайте сайты у нас</a>
+                    <a href="http://idees.ru/" rel="noreferrer" class="footer__create" target="_blank">Создавайте сайты у нас</a>
                 </div>
                 <div class=" col-xl-4 col-lg-auto order-lg-first">
                     <div class="footer__copyright">
