@@ -2263,6 +2263,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   .main__title {
     font-size: 42px; } }
 
+@media (min-width: 992px) {
+  .page__screen:nth-child(1) .main__title {
+    font-size: 100px;
+    line-height: 1; } }
+
 .main__descr {
   font-size: 1.3rem;
   color: #ADB2BB;

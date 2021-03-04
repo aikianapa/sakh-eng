@@ -12,6 +12,14 @@
     }
 }
 
+@media (min-width: 992px) {
+    .page__screen:nth-child(1) .main__title {
+        font-size: 100px;
+        line-height: 1;
+    }
+}
+
+
 .main__descr {
     font-size: 1.3rem;
     color: $gray;
