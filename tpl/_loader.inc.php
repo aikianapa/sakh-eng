@@ -126,7 +126,7 @@ body.loaded .loader {
 <div class="loader">
     <div>
         <p>
-            <img src="assets/img/icons/header_logo.svg" alt="logotype" class="header__logo">
+            <img src="assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
         </p>
         <br>
         <div class="lds-spinner">
