@@ -137,7 +137,7 @@
                             </div>
                             <div class="last-news__cards">
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/n1.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/n1.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         24 февраля 2021 г.
                                     </div>
@@ -146,7 +146,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/n2.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/n2.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         30 Декабря 2020
                                     </div>
@@ -155,7 +155,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/n3.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/n3.jpg" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         30 Декабря 2020
                                     </div>
@@ -164,7 +164,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/1.png" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/1.png" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         17 Декабря 2020
                                     </div>
@@ -173,7 +173,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/2.png" width="340" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/2.png" width="340" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         20 Декабря 2020
                                     </div>
@@ -182,7 +182,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/3.png" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/3.png" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         22 Декабря 2020
                                     </div>
@@ -191,7 +191,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/4.png" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/4.png" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         22 Декабря 2020
                                     </div>
@@ -200,7 +200,7 @@
                                     </a>
                                 </div>
                                 <div class="last-news__card">
-                                    <img src="/thumbc/340x196/src/tpl/assets/img/main/last-news/5.png" width="350" height="196" alt="" class="last-news__img img-fluid">
+                                    <img src="/thumbc/340x196/src/assets/img/main/last-news/5.png" width="350" height="196" alt="" class="last-news__img img-fluid">
                                     <div class="last-news__date">
                                         21 Декабря 2020
                                     </div>
