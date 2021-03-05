@@ -3004,7 +3004,7 @@ html, body {
     z-index: 1; }
   @media (max-width: 767px) {
     .screen__image:before {
-      opacity: 0.5; } }
+      opacity: 0.3; } }
   .screen__image video {
     height: 100%;
     width: 177.77777778vh;
