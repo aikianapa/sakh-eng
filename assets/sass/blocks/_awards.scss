@@ -3,9 +3,12 @@
 }
 .awards__bg {
     position: relative;
-    top: -80px;
+    top: -50px;
     height: 450px;
     background: url(../img/awards/awards_bg.png) center (center / cover) no-repeat;
+    @media (max-width:374px){
+        height: 250px;
+    }
 }
 .awards__content {
     padding-left: 100px;
