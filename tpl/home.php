@@ -31,7 +31,10 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" src="/assets/video/slide01.webm" autoplay="" muted="" playsinline="" loop=""></video>
+                            <video class="slideGallery__video" src="/assets/video/slide01.webm" autoplay="" muted="true" playsinline="true" loop="">
+                                <source src="/assets/video/slide01.mp4" type="video/mp4">
+                                <source src="/assets/video/slide01.webm" type="video/webm">
+                            </video>
                         </div>
                     </div>
                 </div>
