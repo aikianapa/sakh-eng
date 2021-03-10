@@ -32,7 +32,10 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" src="/assets/video/slide01.webm" autoplay="" muted="" playsinline="" loop=""></video>
+                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
+                                <source src="/assets/video/slide01.webm" type="video/webm">
+                                <source src="/assets/video/slide01.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -83,8 +86,10 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" src="/assets/video/slide02.webm" autoplay="" muted=""
-                                playsinline="" loop=""></video>
+                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
+                                <source src="/assets/video/slide02.webm" type="video/webm">
+                                <source src="/assets/video/slide02.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -110,8 +115,10 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" src="/assets/video/slide03.webm" autoplay="" muted=""
-                                playsinline="" loop=""></video>
+                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
+                                <source src="/assets/video/slide03.webm" type="video/webm">
+                                <source src="/assets/video/slide03.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -145,7 +152,8 @@
                                     <a href="post.html" class="last-news__subtitle">
                                         Сегодня была выставлена вилла стоимостью $1 млн
                                     </a>
-                                </div>
+                                </div>                            <video class="slideGallery__video" src="/assets/video/slide04.webm" autoplay="" muted=""
+                                playsinline="" loop=""></video>
                                 <div class="last-news__card">
                                     <img src="assets/img/main/last-news/n2.jpg" alt="" class="last-news__img">
                                     <div class="last-news__date">
@@ -214,8 +222,10 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" src="/assets/video/slide04.webm" autoplay="" muted=""
-                                playsinline="" loop=""></video>
+                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
+                                <source src="/assets/video/slide04.webm" type="video/webm">
+                                <source src="/assets/video/slide04.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>

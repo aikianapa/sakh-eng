@@ -9,7 +9,10 @@
 <!--#include file="./_menu.inc.php" -->
 
 <div class="page-bg">
-      <video src="/assets/video/common.webm" autoplay="" muted="" playsinline="" loop=""></video>
+        <video autoplay="true" muted="true" playsinline="true" loop="true">
+            <source src="/assets/video/common.webm" type="video/webm">
+            <source src="/assets/video/common.mp4" type="video/mp4">
+        </video>
         <div class="page-bg__wrapper">
         
             <div class="company">
