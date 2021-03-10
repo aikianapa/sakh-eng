@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <wb-include wb-tpl="_head.inc.php" />
 
 <body class="body-home">
@@ -115,11 +116,6 @@
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
-
 
 <wb-include wb-tpl="_footer.inc.php" />
 
