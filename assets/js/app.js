@@ -32,7 +32,7 @@ $(document).mouseup(function (e) {
 });
 
 // Меню проекты в мобильной версии
-var hideShowArr = ['projects', 'search', 'company']
+var hideShowArr = ['company', 'search']
 $(`.menu-link-dropdown .menu__tab`).click(function (e) {
     if (!$('.menu__center:visible').length) {
         e.preventDefault();
@@ -563,7 +563,7 @@ sakh.slick = function () {
 $(function () {
     var location = window.location.href;
     var cur_url = location.split('/').pop();
-    var menuArr = ['company', 'projects', 'search']
+    var menuArr = ['company', 'search']
     console.log(location);
     console.log(cur_url);
     menuArr = menuArr.filter(e=>e!==cur_url)
@@ -573,12 +573,11 @@ $(function () {
         if (cur_url == link) {
             $(this).addClass('menu__tab--active');
             $(`.menu__center__${cur_url}`).show(1000)
-            $(`.menu__center__${menuArr[0]}`).hide('slow')
-            $(`.menu__center__${menuArr[1]}`).hide(500)
+            $(`.menu__center__${menuArr[0]}`).hide(500)
         }
-        else if(cur_url!==hideShowArr[0] && cur_url!==hideShowArr[1] && cur_url!==hideShowArr[2]){
-            $(`.menu__center--projects`).show(500)
-            $(`.menu__center--projects > a`).show(500)
+        else if(cur_url!==hideShowArr[0] && cur_url!==hideShowArr[1]){
+            $(`.menu__center--company`).show(500)
+            $(`.menu__center--company > a`).show(500)
             $(`.dropdown_menu`).first().show(500)
         }
     });
@@ -616,32 +615,12 @@ $(document).ready(function () {
         $(".menu__tab--search").mouseenter(function() {
             $(".menu__center__search").show(500) 
             $(".menu__center__company").hide(500)
-            $(".menu__center__projects").hide(500)
         })
-        $(".menu__tab--projects").mouseenter(function(){
-          $(".menu__center__projects").show(500);
-          $(".menu__center__search").hide(500);
-          $(".menu__center__company").hide(500);
-        });
+        
         $(".menu__tab--company").mouseenter(function() {
             $(".menu__center__company").show(500) 
             $(".menu__center__search").hide(500); 
-            $(".menu__center__projects").hide(500); 
         })
-        // $(".menu__tab--job").mouseenter(function() {
-        //     $(".menu__center__company").hide(500) 
-        //     $(".menu__center__search").hide(500); 
-        //     $(".menu__center__projects").hide(500); 
-        // })
-        // $(".menu__tab--contacts").mouseenter(function() {
-        //     $(".menu__center__company").hide(500) 
-        //     $(".menu__center__search").hide(500); 
-        //     $(".menu__center__projects").hide(500); 
-        // })
-       
-
-
-
 
 
       });
@@ -680,6 +659,4 @@ modal.onclick = function () {
     document.querySelector('.header').style.position = 'fixed'
     document.querySelector('.header').style.zIndex = '10'
     document.querySelector('.header').style.transition = 'all .3s linear'
-
-
 }

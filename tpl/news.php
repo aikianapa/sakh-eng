@@ -10,8 +10,8 @@
 
 
 
-<!--#include file="./_loader.inc.html" -->
-<!--#include file="./_menu.inc.html" -->    <div class="page-bg" style="background-image: url();">
+<!--#include file="./_loader.inc" -->
+<!--#include file="./_menu.inc" -->    <div class="page-bg" style="background-image: url();">
 <div class="page-bg__wrapper">
             
             
@@ -28,7 +28,7 @@
                                     <p class="news__date">
                                         17 Декабря 2020
                                     </p>
-                                    <a href="post.html" class="news__name">
+                                    <a href="post" class="news__name">
                                         Сегодня была выставлена вилла стоимостью $1 млн
                                     </a>
                                 </div>
@@ -39,7 +39,7 @@
                                             <p class="news__date">
                                                 17 Декабря 2020
                                             </p>
-                                            <a href="post.html" class="news__name">
+                                            <a href="post" class="news__name">
                                                 Сегодня была выставлена вилла стоимостью $1 млн
                                             </a>
                                         </div>
@@ -50,7 +50,7 @@
                                             <p class="news__date">
                                                 17 Декабря 2020
                                             </p>
-                                            <a href="post.html" class="news__name">
+                                            <a href="post" class="news__name">
                                                 Значимость этих проблем настолько очевидна, что н...
                                             </a>
                                         </div>
@@ -63,7 +63,7 @@
                                             <p class="news__date">
                                                 17 Декабря 2020
                                             </p>
-                                            <a href="post.html" class="news__name">
+                                            <a href="post" class="news__name">
                                                 Сегодня была выставлена вилла стоимостью $1 млн
                                             </a>
                                         </div>
@@ -74,7 +74,7 @@
                                             <p class="news__date">
                                                 17 Декабря 2020
                                             </p>
-                                            <a href="post.html" class="news__name">
+                                            <a href="post" class="news__name">
                                                 Значимость этих проблем настолько очевидна, что н...
                                             </a>
                                         </div>
@@ -91,7 +91,7 @@
                                 <div class="news__date news__date--last">
                                     20 Декабря 2020
                                 </div>
-                                <a href="post.html" class="news__name news__name--last">
+                                <a href="post" class="news__name news__name--last">
                                     Значимость этих проблем настолько очевидна, что н...
                                 </a>
                             </div>
@@ -99,7 +99,7 @@
                                 <div class="news__date news__date--last">
                                     17 Декабря 2020
                                 </div>
-                                <a href="post.html" class="news__name news__name--last">
+                                <a href="post" class="news__name news__name--last">
                                     Сегодня была выставлена вилла стоимостью $1 млн
                                 </a>
                             </div>
@@ -107,7 +107,7 @@
                                 <div class="news__date news__date--last">
                                     20 Декабря 2020
                                 </div>
-                                <a href="post.html" class="news__name news__name--last">
+                                <a href="post" class="news__name news__name--last">
                                     Значимость этих проблем настолько очевидна, что н...
                                 </a>
                             </div>
@@ -115,7 +115,7 @@
                                 <div class="news__date news__date--last">
                                     17 Декабря 2020
                                 </div>
-                                <a href="post.html" class="news__name news__name--last">
+                                <a href="post" class="news__name news__name--last">
                                     Сегодня была выставлена вилла стоимостью $1 млн
                                 </a>
                             </div>
@@ -123,7 +123,7 @@
                                 <div class="news__date news__date--last">
                                     20 Декабря 2020
                                 </div>
-                                <a href="post.html" class="news__name news__name--last">
+                                <a href="post" class="news__name news__name--last">
                                     Значимость этих проблем настолько очевидна, что н...
                                 </a>
                             </div>
@@ -170,7 +170,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">
@@ -235,7 +235,7 @@
             </div>
         </div>
     </div>
-<!--#include file="./_footer.inc.html" -->
+<!--#include file="./_footer.inc" -->
 
 
 <wb-include wb-tpl="_footer.inc.php" />

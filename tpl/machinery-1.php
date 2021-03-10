@@ -13,7 +13,7 @@
             <section class="machinery">
                 <div class="container">
                     <div class="back">
-                        <a href="rent.html" class="back__arrow"></a>
+                        <a href="rent" class="back__arrow"></a>
                         <h1 class="back__title">
                             Licronic 974
                         </h1>
@@ -78,7 +78,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

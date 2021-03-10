@@ -8,11 +8,10 @@
     <!--#include file="./_loader.inc.php" -->
 <!--#include file="./_menu.inc.php" -->
 <div class="page-bg">
-        <video autoplay="true" muted="true" playsinline="true" loop="true">
-            <source src="/assets/video/common.webm" type="video/webm">
-            <source src="/assets/video/common.mp4" type="video/mp4">
-        </video>
-
+<video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
+                                <source src="/assets/video/common.webm" type="video/webm">
+                                <source src="/assets/video/common.mp4" type="video/mp4">
+                            </video>
         <div class="page-bg__wrapper">
             
             <section class="media">
@@ -104,7 +103,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

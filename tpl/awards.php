@@ -17,7 +17,7 @@
                 <div class="awards__content">
                     <div class="container">
                         <h1 class="awards__title">
-                            Рейтинги и награды
+                            О компании
                         </h1>
                         <p class="awards__descr">
                             Начав свою деятельность в 1991 году, когда Санкт-Петербург еще был Ленинградом, Архитектурное бюро «А.Лен» своими работами последовательно создает себе репутацию лидирующего проектировщика в наиболее активных направлениях строительства. В разные годы это могли быть коттеджи и коттеджные поселки, автоцентры, гостиницы и отели, жилые комплексы. Подтверждение тому – коллекция наград международных и национальных архитектурных конкурсов и премий, включая государственные награды.
@@ -188,7 +188,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

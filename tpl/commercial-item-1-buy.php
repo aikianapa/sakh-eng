@@ -14,7 +14,7 @@
                         <div class="col-md-auto">
                             <div class="realty-item__sidebar">
                                 <div class="back">
-                                    <a href="realty.html" class="back__arrow"></a>
+                                    <a href="realty" class="back__arrow"></a>
                                     <h1 class="back__title">
                                         "Октябрь"
                                     </h1>
@@ -98,7 +98,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

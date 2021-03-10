@@ -37,19 +37,19 @@
                         
                         <div class="projects projects__rent">
                             <div class="projects__list">
-                                <a href="#" class="projects__item">
+                                <a href="machinery-1" class="projects__item">
                                     <div class="projects__name">
                                         Licronic 974
                                     </div>
                                     <img src="assets/img/rent/rent_1.png" class="projects__img">
                                 </a>
-                                <a href="#" class="projects__item">
+                                <a href="machinery-1" class="projects__item">
                                     <div class="projects__name">
                                         Hamm
                                     </div>
                                     <img src="assets/img/rent/rent_2.png" class="projects__img">
                                 </a>
-                                <a href="#" class="projects__item">
+                                <a href="machinery-1" class="projects__item">
                                     <div class="projects__name">
                                         Кран "Машека"
                                     </div>

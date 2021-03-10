@@ -14,45 +14,45 @@
                     <div class="col-lg-4">
                         <div class="sidebar sidebar--realty">
                             <div class="back back--realty">
-                                <a href="projects.html" class="back__arrow"></a>
+                                <a href="projects" class="back__arrow"></a>
                                 <h1 class="back__title back__title--realty">
                                     Жилая недвижимость
                                 </h1>
                             </div>
                             <ul class="sidebar__list sidebar__list--realty">
                                 <li class="sidebar__item sidebar__item--realty sidebar__item--active">
-                                    <a href="residential.html" class="sidebar__link">
+                                    <a href="residential" class="sidebar__link">
                                         Жилая недвижимость
                                     </a>
                                     <div class="sidebar__hidden sidebar__hidden--active">
-                                        <a href="residential-map.html" class="sidebar-hidden__link sidebar__hidden--underline">
+                                        <a href="residential-map" class="sidebar-hidden__link sidebar__hidden--underline">
                                             На карте
                                         </a>
-                                        <a href="residential-district.html" class="sidebar-hidden__link ">
+                                        <a href="residential-district" class="sidebar-hidden__link ">
                                             По району
                                         </a>
                                     </div>
                                 </li>
                                 <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="commercial.html" class="sidebar__link">
+                                    <a href="commercial" class="sidebar__link">
                                         Коммерческая недвижимость
                                     </a>  
                                     <div class="sidebar__hidden ">
-                                        <a href="commercial-buy.html" class="sidebar-hidden__link ">
+                                        <a href="commercial-buy" class="sidebar-hidden__link ">
                                             Покупка
                                         </a>
-                                        <a href="commercial-rent.html" class="sidebar-hidden__link ">
+                                        <a href="commercial-rent" class="sidebar-hidden__link ">
                                             Аренда
                                         </a>
                                     </div>
                                 </li>
                                 <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="country.html" class="sidebar__link">
+                                    <a href="country" class="sidebar__link">
                                         Загородная недвижимость
                                     </a>  
                                 </li>
                                 <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="parking.html" class="sidebar__link">
+                                    <a href="parking" class="sidebar__link">
                                         Паркинг
                                     </a>  
                                 </li>
@@ -153,7 +153,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

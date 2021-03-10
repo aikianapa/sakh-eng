@@ -18,7 +18,7 @@
 }
 @media(max-width: 575px) {
     .to_journalists {
-        padding: 130px 0 100px 0; 
+        padding: 110px 0 100px 0; 
      }
     .to_journalists__title {
         font-size: 48px;
@@ -26,4 +26,18 @@
     .to_journalists__descr {
         padding: 0 15px;
     }
+}
+@media(max-width: 374px) {
+    .to_journalists {
+        padding: 80px 0 100px 0; 
+     }
+    .to_journalists__title {
+        font-size: 45px;
+    }
+    .to_journalists__descr {
+        width: 300px;
+    }
+
+    
+    
 }

@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-7 col-lg-8">
                             <h1 class="tenders__title">
-                                Тендеры Сахалин-&nbspинжиниринг
+                                Тендеры Сахалин-Инжиниринг
                             </h1>
                             <div class="tenders__item">
                                 <p class="tenders__descr">
@@ -107,7 +107,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">

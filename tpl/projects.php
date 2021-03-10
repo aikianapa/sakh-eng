@@ -13,12 +13,12 @@
                     <div class="row align-items-center mb-4">
                         <div class="col">
                         <div class="sidebar__title">
-                                Тип проекта:
+                                Тип объекта:
                             </div>
                             <div class="search__tags">
-                                <div class="search__tag">Недвижимость</div>
-                                <div class="search__tag">Строительная лаборатория</div>
-                                <div class="search__tag">Аренда строительной техники</div>
+                                <div class="search__tag">Строящиеся</div>
+                                <div class="search__tag">Законченные</div>
+                                <div class="search__tag">Проектируемые</div>
                             </div>
                         </div>
                         <div class="col-auto">

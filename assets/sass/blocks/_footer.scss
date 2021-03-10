@@ -15,11 +15,13 @@ opacity: .9;
 
 .body-home {
     .footer {
-        position: fixed;
+        position: absolute;
         right: 0;
         left: 0;
         bottom: 0;
+        // z-index: 5;
     }
+    
 }
 
 .footer__social {

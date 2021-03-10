@@ -31,10 +31,7 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
-                                <source src="/assets/video/slide01.webm" type="video/webm">
-                                <source src="/assets/video/slide01.mp4" type="video/mp4">
-                            </video>
+                            <video class="slideGallery__video" src="/assets/video/slide01.webm" autoplay="" muted="" playsinline="" loop=""></video>
                         </div>
                     </div>
                 </div>
@@ -85,10 +82,8 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
-                                <source src="/assets/video/slide02.webm" type="video/webm">
-                                <source src="/assets/video/slide02.mp4" type="video/mp4">
-                            </video>
+                            <video class="slideGallery__video" src="/assets/video/slide02.webm" autoplay="" muted=""
+                                playsinline="" loop=""></video>
                         </div>
                     </div>
                 </div>
@@ -114,10 +109,8 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
-                                <source src="/assets/video/slide03.webm" type="video/webm">
-                                <source src="/assets/video/slide03.mp4" type="video/mp4">
-                            </video>
+                            <video class="slideGallery__video" src="/assets/video/slide03.webm" autoplay="" muted=""
+                                playsinline="" loop=""></video>
                         </div>
                     </div>
                 </div>
@@ -137,7 +130,7 @@
                                     </p>
                                 </div>
                                 <div class="col-xl-2 mt-5 mt-md-0 text-xl-right">
-                                    <a href="news.html" class="last-news__watch">
+                                    <a href="news" class="last-news__watch">
                                         Смотреть все
                                     </a>
                                 </div>
@@ -148,7 +141,7 @@
                                     <div class="last-news__date">
                                         24 февраля 2021 г.
                                     </div>
-                                    <a href="post1.html" class="last-news__subtitle">
+                                    <a href="post1" class="last-news__subtitle">
                                         Сахалинский лёд 2021
                                     </a>
                                 </div>
@@ -157,7 +150,7 @@
                                     <div class="last-news__date">
                                         30 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Традиционный новогодний конкурс
                                     </a>
                                 </div>
@@ -166,7 +159,7 @@
                                     <div class="last-news__date">
                                         30 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         История с продолжением
                                     </a>
                                 </div>
@@ -175,7 +168,7 @@
                                     <div class="last-news__date">
                                         17 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Сегодня была выставлена вилла стоимостью $1 млн
                                     </a>
                                 </div>
@@ -184,7 +177,7 @@
                                     <div class="last-news__date">
                                         20 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Значимость этих проблем настолько очевидна, что напврвввввввввввв
                                     </a>
                                 </div>
@@ -193,7 +186,7 @@
                                     <div class="last-news__date">
                                         22 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Консультация с широким активом требуют от нас анаврапррывапвы
                                     </a>
                                 </div>
@@ -202,7 +195,7 @@
                                     <div class="last-news__date">
                                         22 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Равным образом дальнейшее развитие различных фораврывроаопав
                                     </a>
                                 </div>
@@ -211,7 +204,7 @@
                                     <div class="last-news__date">
                                         21 Декабря 2020
                                     </div>
-                                    <a href="post.html" class="last-news__subtitle">
+                                    <a href="post" class="last-news__subtitle">
                                         Равным образом дальнейшее развитие различных фор...
                                     </a>
                                 </div>
@@ -220,10 +213,8 @@
                     </div>
                     <div class="screen__body">
                         <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <video class="slideGallery__video" autoplay="true" muted="true" playsinline="true" loop="true">
-                                <source src="/assets/video/slide04.webm" type="video/webm">
-                                <source src="/assets/video/slide04.mp4" type="video/mp4">
-                            </video>
+                            <video class="slideGallery__video" src="/assets/video/slide04.webm" autoplay="" muted=""
+                                playsinline="" loop=""></video>
                         </div>
                     </div>
                 </div>
@@ -269,7 +260,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required>
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="privacy" class="checkbox__link">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">
