@@ -4,7 +4,7 @@
 
 /* Default styles */
 body {
-    min-width: 350px;
+    min-width: 319px;
     margin: 0;
     font-family: 'Play', sans-serif;
     font-weight: 400;
@@ -90,3 +90,4 @@ a {
 @import "blocks/slick";
 @import "blocks/body-menu-opened";
 @import "blocks/home";
+@import "blocks/project";

@@ -3,12 +3,18 @@
         //padding: 150px 0 50px 0;
         //max-width: 400px;
     }
+    @media (max-width: 374px) {
+        font-size: 36px;
+    }
 }
 
 .partners__descr {
     @media (min-width: 1200px) {
         //margin: 0 0 0 50px;
         //max-width: 280px;
+    }
+    @media (max-width: 374px) {
+        max-width: 300px;
     }
 }
 
@@ -125,6 +131,9 @@
     @media (min-width: 1200px) {
         min-height: 260px;
         width: 300px !important;
+    }
+    @media (max-width: 374px){
+        margin-left: -10px;
     }
 }
 

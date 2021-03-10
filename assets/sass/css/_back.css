@@ -1,0 +1,24 @@
+.back {
+  display: inline-flex;
+  align-items: center; }
+
+.back__arrow {
+  display: block;
+  background: url(../img/icons/arrow.svg) center center / contain no-repeat;
+  min-width: 40px;
+  height: 40px;
+  transition: all 0.2s; }
+  .back__arrow:hover {
+    box-shadow: inset 0 0 5px 5px rgba(95, 9, 23, 0.5); }
+
+.back__title {
+  display: block;
+  font-size: 32px;
+  margin: 0 0 0 16px; }
+
+.back--realty {
+  margin-bottom: 30px; }
+
+.back__title--realty {
+  font-size: 24px; }
+/*# sourceMappingURL=/assets/sass/blocks/_back.map */

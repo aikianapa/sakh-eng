@@ -34,4 +34,10 @@
     .job__contacts {
         width: 320px;
     }
-  }
+}
+@media (max-width: 374px) {
+    .job__contacts {
+        text-align: left;
+        width: 300px;
+    }
+}

@@ -10,6 +10,9 @@
     @media (max-width: 767px) {
         font-size: 42px;
     }
+    @media (max-width: 376px) {
+        font-size: 40px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -19,7 +22,6 @@
     }
 }
 
-
 .main__descr {
     font-size: 1.3rem;
     color: $gray;
@@ -27,6 +29,9 @@
     max-width: 800px;
     @media (min-width: 1200px) {
         max-width: 480px;
+    }
+    @media (max-width: 374px) {
+        font-size: 1rem;
     }
 }
 

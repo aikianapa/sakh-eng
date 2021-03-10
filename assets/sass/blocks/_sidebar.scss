@@ -24,6 +24,11 @@
 .sidebar__link {
     display: block;
     transition: all 0.3s;
+
+    @media (max-width: 374px) {
+        max-width: 270px;
+    }
+
 }
 
 .sidebar__item {

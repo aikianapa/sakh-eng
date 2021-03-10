@@ -16,6 +16,13 @@ $("#open-menu, #menu-hide").click(function () {
     showHideMenu();
 });
 
+$('#menu-hide').click(function (){
+    $("#menu").removeClass('menu--dropdown');
+    $('#menu').removeClass('show')
+    $('.menu__prev').hide()
+    hideShowArr.forEach(e=>$(`.menu__tab--${e}`).show())
+})
+
 $(document).mouseup(function (e) {
     var menu = $("#menu");
     if (!menu.is(e.target) && menu.has(e.target).length === 0) {
@@ -25,13 +32,26 @@ $(document).mouseup(function (e) {
 });
 
 // Меню проекты в мобильной версии
-
-$(document).on("click", ".menu-link-project .menu__tab", function (e) {
+var hideShowArr = ['projects', 'search', 'company']
+$(`.menu-link-dropdown .menu__tab`).click(function (e) {
     if (!$('.menu__center:visible').length) {
         e.preventDefault();
-        $("#menu").toggleClass('menu--projects');
+        $("#menu").toggleClass('menu--dropdown');
+        $('.menu__prev').show()
+        hideShowArr.forEach((e,i)=>{
+            if (i!==$(this).index('.menu__tab')){
+                $(`.menu__tab--${e}`).hide()
+            }
+        
+        })
     }
 });
+
+$('.menu__prev').click(function (){
+    hideShowArr.forEach(e=>{$(`.menu__tab--${e}`).show()})
+    $("#menu").removeClass('menu--dropdown');
+    $('.menu__prev').hide()
+})
 
 
 // Фиксированное меню при прокрутке
@@ -107,6 +127,43 @@ if ($('.company__slider-for').length) {
         ]
     });
 }
+if ($('.project__slider-for').length) {
+    $('.project__slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.project__slider-nav'
+    });
+    $('.project__slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode:true,
+        asNavFor: '.project__slider-for',
+        arrows: false,
+        dots: false,
+        infinite: false,
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 4,
+                centerPadding: '0',
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                centerPadding: '0',
+                slidesToShow: 1,
+                slidesToScroll:2,
+                arrows:true,
+                variableWidth: true
+            }
+        }        
+    ]
+    });
+}
 // slick слайдер одинарный главная новости
 if ($('.last-news__cards').length) {
     $('.last-news__cards').slick({
@@ -124,6 +181,7 @@ if ($('.last-news__cards').length) {
         ]
     });
 }
+
 
 // slick слайдер ПАРТНЕРЫ
 
@@ -499,16 +557,29 @@ sakh.slick = function () {
         })
     }
 }
+
+
 // Активный пункт меню
 $(function () {
     var location = window.location.href;
     var cur_url = location.split('/').pop();
+    var menuArr = ['company', 'projects', 'search']
     console.log(location);
     console.log(cur_url);
+    menuArr = menuArr.filter(e=>e!==cur_url)
+    console.log(menuArr)
     $('.menu li').each(function () {
         var link = $(this).find('a').attr('href');
         if (cur_url == link) {
             $(this).addClass('menu__tab--active');
+            $(`.menu__center__${cur_url}`).show(1000)
+            $(`.menu__center__${menuArr[0]}`).hide('slow')
+            $(`.menu__center__${menuArr[1]}`).hide(500)
+        }
+        else if(cur_url!==hideShowArr[0] && cur_url!==hideShowArr[1] && cur_url!==hideShowArr[2]){
+            $(`.menu__center--projects`).show(500)
+            $(`.menu__center--projects > a`).show(500)
+            $(`.dropdown_menu`).first().show(500)
         }
     });
 });
@@ -516,4 +587,99 @@ $(function () {
 $(document).ready(function(){
     $('body').addClass('loaded');
     sakh.slick();
+    setTimeout(()=>{
+    $('.slick-list').removeClass('draggable')
+    $('.slick-slide').css({'padding': '0'})
+    },50)
 })
+$(window).resize(function(){
+    if($(window).width() < 767){
+    $(".footer__create").hide()
+    $('.br__hide').show()
+    
+    }
+    else if($(window).width() > 767 && $(window).width() < 1200){
+      $(".footer__create").html('').show()
+    }
+    else if($(window).width() > 1200){
+      $(".footer__create").html("Создавайте сайты у нас").show()
+      $('.menu__prev').hide()
+      hideShowArr.forEach(e=>{$(`.menu__tab--${e}`).show()})
+    }
+  }).resize()
+
+ 
+$(document).ready(function () {
+
+
+
+        $(".menu__tab--search").mouseenter(function() {
+            $(".menu__center__search").show(500) 
+            $(".menu__center__company").hide(500)
+            $(".menu__center__projects").hide(500)
+        })
+        $(".menu__tab--projects").mouseenter(function(){
+          $(".menu__center__projects").show(500);
+          $(".menu__center__search").hide(500);
+          $(".menu__center__company").hide(500);
+        });
+        $(".menu__tab--company").mouseenter(function() {
+            $(".menu__center__company").show(500) 
+            $(".menu__center__search").hide(500); 
+            $(".menu__center__projects").hide(500); 
+        })
+        // $(".menu__tab--job").mouseenter(function() {
+        //     $(".menu__center__company").hide(500) 
+        //     $(".menu__center__search").hide(500); 
+        //     $(".menu__center__projects").hide(500); 
+        // })
+        // $(".menu__tab--contacts").mouseenter(function() {
+        //     $(".menu__center__company").hide(500) 
+        //     $(".menu__center__search").hide(500); 
+        //     $(".menu__center__projects").hide(500); 
+        // })
+       
+
+
+
+
+
+      });
+
+      
+     
+var modal = document.getElementById("company__modal--id");
+var img = document.querySelectorAll(".company__img-item")
+var modalImg = document.getElementById("company__modal--img01");
+var captionText = document.getElementById("company__modal--caption");
+
+img.forEach(e=>e.addEventListener('click', function() {
+  document.querySelector('.header').style.position = 'absolute'
+  document.querySelector('.header').style.zIndex = '1'
+  document.querySelector('.header').style.transition = 'all 0s'
+  modal.style.display = "block";
+  modal.style.cursor = "pointer";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+  modalImg.style.cursor = 'default'
+  
+}))
+
+var span = document.getElementsByClassName("company__modal--close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+  modalImg.style.cursor = 'pointer'
+  document.querySelector('.header').style.position = 'fixed'
+  document.querySelector('.header').style.zIndex = '10'
+  document.querySelector('.header').style.transition = 'all .3s linear'
+
+}
+modal.onclick = function () {
+    modal.style.display = "none";
+    document.querySelector('.header').style.position = 'fixed'
+    document.querySelector('.header').style.zIndex = '10'
+    document.querySelector('.header').style.transition = 'all .3s linear'
+
+
+}

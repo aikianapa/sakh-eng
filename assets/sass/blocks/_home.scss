@@ -39,8 +39,7 @@ body {
 //    transform: translate(0px, -100%);
 //    background-color: rgba(0, 0, 0, 0.5);
 //}
-.header__menu {
-}
+
 //.menu {
 //    display: flex;
 //    min-height: 50px;
@@ -195,6 +194,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
+    
 }
 .screen__image {
     position: absolute;
@@ -214,7 +214,7 @@ body {
         opacity: .9;
         z-index: 1;
         @media (max-width: 767px) {
-            opacity: 0.3;
+            opacity: 0.9;
         }
     }
     video {
@@ -284,4 +284,9 @@ body {
             padding-right: 15px;
         }
     }
+    @media (max-width: 376px) {
+        &:not(.body-free) .container {
+             padding-right: 15px;
+         }
+     }
 }

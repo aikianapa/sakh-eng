@@ -1,0 +1,14 @@
+.body-menu-opened {
+  overflow: hidden;
+  position: relative; }
+  .body-menu-opened:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #1f263c;
+    z-index: 80; }
+/*# sourceMappingURL=/assets/sass/blocks/_body-menu-opened.map */

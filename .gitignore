@@ -1,4 +1,5 @@
 /engine/
+/node_modules/
 /database/users.json
 /database/_cache/*
 /uploads/_cache/*
