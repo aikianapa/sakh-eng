@@ -1,23 +1,17 @@
-DirectoryIndex index.php index.html
+DirectoryIndex index.php
 AddDefaultCharset UTF-8
 
+<IfModule mod_headers.c>
+<FilesMatch ".(webp|gif|jpg|jpeg|png|ico|svg|js|css|pdf)$">
+  Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+</IfModule>
+
 RewriteBase /
-Options +FollowSymLinks +Includes
-
-AddType text/html .html
-AddOutputFilter INCLUDES .html
-
-#AddType text/html .php
-#AddOutputFilter INCLUDES .php
-
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|webp|mp4|webm|svg)$">
-Header set Cache-Control "max-age=31536000, public"
-</filesMatch>
-
-
+Options +FollowSymLinks
 RewriteEngine On
 
-RewriteRule ^(.*)\.less$ index.php
+RewriteRule ^(.*)\.less$ index.php 
 RewriteRule ^(.*)\.scss$ index.php 
 
 RewriteCond %{HTTP_HOST} ^www\.(.*)$

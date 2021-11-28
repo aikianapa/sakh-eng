@@ -1,5 +1,3 @@
-// Скрыть/показать меню
-
 var sakh = {};
 
 function showHideMenu() {
@@ -11,19 +9,19 @@ function showHideMenu() {
     }
 }
 
-$("#open-menu, #menu-hide").click(function () {
+$("#open-menu, #menu-hide").click(function() {
     $("#menu").toggleClass('show');
     showHideMenu();
 });
 
-$('#menu-hide').click(function (){
+$('#menu-hide').click(function() {
     $("#menu").removeClass('menu--dropdown');
     $('#menu').removeClass('show')
     $('.menu__prev').hide()
-    hideShowArr.forEach(e=>$(`.menu__tab--${e}`).show())
+    hideShowArr.forEach(e => $(`.menu__tab--${e}`).show())
 })
 
-$(document).mouseup(function (e) {
+$(document).mouseup(function(e) {
     var menu = $("#menu");
     if (!menu.is(e.target) && menu.has(e.target).length === 0) {
         menu.removeClass('show');
@@ -33,29 +31,29 @@ $(document).mouseup(function (e) {
 
 // Меню проекты в мобильной версии
 var hideShowArr = ['company', 'search']
-$(`.menu-link-dropdown .menu__tab`).click(function (e) {
+$(`.menu-link-dropdown .menu__tab`).click(function(e) {
     if (!$('.menu__center:visible').length) {
         e.preventDefault();
         $("#menu").toggleClass('menu--dropdown');
         $('.menu__prev').show()
-        hideShowArr.forEach((e,i)=>{
-            if (i!==$(this).index('.menu__tab')){
+        hideShowArr.forEach((e, i) => {
+            if (i !== $(this).index('.menu__tab')) {
                 $(`.menu__tab--${e}`).hide()
             }
-        
+
         })
     }
 });
 
-$('.menu__prev').click(function (){
-    hideShowArr.forEach(e=>{$(`.menu__tab--${e}`).show()})
+$('.menu__prev').click(function() {
+    hideShowArr.forEach(e => { $(`.menu__tab--${e}`).show() })
     $("#menu").removeClass('menu--dropdown');
     $('.menu__prev').hide()
 })
 
 
 // Фиксированное меню при прокрутке
-$(window).on("scroll", function () {
+$(window).on("scroll", function() {
     // Если высота больше 0
     // Добавляем классу header класс header--fixed
     if ($(window).scrollTop() > 0) {
@@ -101,11 +99,11 @@ if ($('.company__slider-for').length) {
         infinite: false,
         focusOnSelect: true,
         responsive: [{
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 9
-            }
-        },
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 9
+                }
+            },
             {
                 breakpoint: 991,
                 settings: {
@@ -138,30 +136,30 @@ if ($('.project__slider-for').length) {
     $('.project__slider-nav').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        centerMode:true,
+        centerMode: true,
         asNavFor: '.project__slider-for',
         arrows: false,
         dots: false,
         infinite: false,
         focusOnSelect: true,
         responsive: [{
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 4,
-                centerPadding: '0',
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                    centerPadding: '0',
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    centerPadding: '0',
+                    slidesToShow: 1,
+                    slidesToScroll: 2,
+                    arrows: true,
+                    variableWidth: true
+                }
             }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                centerPadding: '0',
-                slidesToShow: 1,
-                slidesToScroll:2,
-                arrows:true,
-                variableWidth: true
-            }
-        }        
-    ]
+        ]
     });
 }
 // slick слайдер одинарный главная новости
@@ -171,14 +169,12 @@ if ($('.last-news__cards').length) {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1
-                }
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1
             }
-        ]
+        }]
     });
 }
 
@@ -207,19 +203,16 @@ function initSliderPartners() {
             slidesToShow: 2,
             slidesToScroll: 2,
             arrows: true,
-
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1
-                    }
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
                 }
-            ]
+            }]
         });
         insertCountSliderPartners();
 
-        activeSlider.on("afterChange", function () {
+        activeSlider.on("afterChange", function() {
             insertCountSliderPartners();
         });
 
@@ -232,14 +225,14 @@ function initSliderPartners() {
 if ($('.partners__cards').length) {
     initSliderPartners();
 
-    $(document).on("shown.bs.tab", ".partners__tabs .nav-tabs__tab", function () {
+    $(document).on("shown.bs.tab", ".partners__tabs .nav-tabs__tab", function() {
         initSliderPartners();
     });
 }
 
 
 //Паркинг tooltip переключение
-$(document).on("click", ".parking-place__item:not(.parking-place__item--title)", function () {
+$(document).on("click", ".parking-place__item:not(.parking-place__item--title)", function() {
     var parkingLength = $(this).attr('data-length') + " м.";
     var parkingWidth = $(this).attr('data-width') + " м.";
     var parkingPrice = $(this).attr('data-price') + " Р.";
@@ -251,14 +244,14 @@ $(document).on("click", ".parking-place__item:not(.parking-place__item--title)",
     $("#tooltip-price").text(parkingPrice);
 });
 
-$(document).on("click", function (e) {
+$(document).on("click", function(e) {
     var tooltip = $(".parking-place__item");
     if (!tooltip.is(e.target) && tooltip.has(e.target).length === 0) {
         tooltip.removeClass('parking-place__item--tooltip');
     }
 });
 
-$(document).on("click", ".parking-place__item--title", function (e) {
+$(document).on("click", ".parking-place__item--title", function(e) {
     $('.parking-place__row--active').removeClass('parking-place__row--active')
     $(this).closest('.parking-place__row').addClass('parking-place__row--active')
 });
@@ -352,7 +345,7 @@ if (wrapper) {
         // События
         on: {
             // Событие инициализации
-            init: function () {
+            init: function() {
                 wrapper.classList.add('_loaded');
             },
         },
@@ -380,7 +373,7 @@ if (wrapper) {
 
     initOrDestroyPageSlider();
 
-    window.addEventListener(`resize`, function (e) {
+    window.addEventListener(`resize`, function(e) {
         initOrDestroyPageSlider();
     });
 }
@@ -388,7 +381,7 @@ if (wrapper) {
 
 // Маска на input
 if ($('input[name=phone]').length) {
-    $(function () {
+    $(function() {
         $('input[name=phone]').mask("+7 (999) 999-99-99");
     });
 }
@@ -398,7 +391,7 @@ function parse_str(str, array) {
         sal = strArr.length,
         i, j, ct, p, lastObj, obj, lastIter, undef, chr, tmp, key, value,
         postLeftBracketPos, keys, keysLen,
-        fixStr = function (str) {
+        fixStr = function(str) {
             return decodeURIComponent(str.replace(/\+/g, '%20'));
         };
 
@@ -423,8 +416,7 @@ function parse_str(str, array) {
             for (j = 0; j < key.length; j++) {
                 if (key.charAt(j) === '[' && !postLeftBracketPos) {
                     postLeftBracketPos = j + 1;
-                }
-                else if (key.charAt(j) === ']') {
+                } else if (key.charAt(j) === ']') {
                     if (postLeftBracketPos) {
                         if (!keys.length) {
                             keys.push(key.slice(0, postLeftBracketPos - 1));
@@ -460,8 +452,7 @@ function parse_str(str, array) {
                         obj[key] = {};
                     }
                     obj = obj[key];
-                }
-                else { // To insert new dimension
+                } else { // To insert new dimension
                     ct = -1;
                     for (p in obj) {
                         if (obj.hasOwnProperty(p)) {
@@ -478,15 +469,19 @@ function parse_str(str, array) {
     }
 }
 
-sakh.dataOptions = function (el) {
+sakh.dataOptions = function(el) {
 
-    var strToBool = function (string) {
+    var strToBool = function(string) {
         if (typeof string === "string") {
             switch (string.toLowerCase().trim()) {
-                case "true": return true;
-                case "false": return false;
-                case "null": return null;
-                case "undefined": return undefined;
+                case "true":
+                    return true;
+                case "false":
+                    return false;
+                case "null":
+                    return null;
+                case "undefined":
+                    return undefined;
             }
             if (!isNaN(string)) string = string * 1;
         }
@@ -501,9 +496,9 @@ sakh.dataOptions = function (el) {
     return el.options;
 }
 
-sakh.slick = function () {
+sakh.slick = function() {
     if ($('.slick').length) {
-        $('.slick').each(function () {
+        $('.slick').each(function() {
             this.options = {
                 infinite: true,
                 lazyLoad: 'ondemand',
@@ -560,22 +555,20 @@ sakh.slick = function () {
 
 
 // Активный пункт меню
-$(function () {
+$(function() {
     var location = window.location.href;
     var cur_url = location.split('/').pop();
     var menuArr = ['company', 'search']
     console.log(location);
     console.log(cur_url);
-    menuArr = menuArr.filter(e=>e!==cur_url)
-    console.log(menuArr)
-    $('.menu li').each(function () {
+    menuArr = menuArr.filter(e => e !== cur_url)
+    $('.menu li').each(function() {
         var link = $(this).find('a').attr('href');
         if (cur_url == link) {
             $(this).addClass('menu__tab--active');
             $(`.menu__center__${cur_url}`).show(1000)
             $(`.menu__center__${menuArr[0]}`).hide(500)
-        }
-        else if(cur_url!==hideShowArr[0] && cur_url!==hideShowArr[1]){
+        } else if (cur_url !== hideShowArr[0] && cur_url !== hideShowArr[1]) {
             $(`.menu__center--company`).show(500)
             $(`.menu__center--company > a`).show(500)
             $(`.dropdown_menu`).first().show(500)
@@ -583,80 +576,81 @@ $(function () {
     });
 });
 
-$(document).ready(function(){
-    $('body').addClass('loaded');
+$(document).ready(function() {
+    $('body').addClass('body-home loaded');
     sakh.slick();
-    setTimeout(()=>{
-    $('.slick-list').removeClass('draggable')
-    $('.slick-slide').css({'padding': '0'})
-    },50)
+    setTimeout(() => {
+        $('.slick-list').removeClass('draggable')
+        $('.slick-slide').css({ 'padding': '0' })
+    }, 50)
 })
-$(window).resize(function(){
-    if($(window).width() < 767){
-    $(".footer__create").hide()
-    $('.br__hide').show()
-    
+$(window).resize(function() {
+    if ($(window).width() < 767) {
+        $(".footer__create").hide()
+        $('.br__hide').show()
+
+    } else if ($(window).width() > 767 && $(window).width() < 1200) {
+        $(".footer__create").html('').show()
+    } else if ($(window).width() > 1200) {
+        $(".footer__create").html("Создавайте сайты у нас").show()
+        $('.menu__prev').hide()
+        hideShowArr.forEach(e => { $(`.menu__tab--${e}`).show() })
     }
-    else if($(window).width() > 767 && $(window).width() < 1200){
-      $(".footer__create").html('').show()
-    }
-    else if($(window).width() > 1200){
-      $(".footer__create").html("Создавайте сайты у нас").show()
-      $('.menu__prev').hide()
-      hideShowArr.forEach(e=>{$(`.menu__tab--${e}`).show()})
-    }
-  }).resize()
+}).resize()
 
- 
-$(document).ready(function () {
+
+$(document).ready(function() {
 
 
 
-        $(".menu__tab--search").mouseenter(function() {
-            $(".menu__center__search").show(500) 
-            $(".menu__center__company").hide(500)
-        })
-        
-        $(".menu__tab--company").mouseenter(function() {
-            $(".menu__center__company").show(500) 
-            $(".menu__center__search").hide(500); 
-        })
+    $(".menu__tab--search").mouseenter(function() {
+        $(".menu__center__search").show(500)
+        $(".menu__center__company").hide(500)
+    })
+
+    $(".menu__tab--company").mouseenter(function() {
+        $(".menu__center__company").show(500)
+        $(".menu__center__search").hide(500);
+    })
 
 
-      });
+});
 
-      
-     
+
+
 var modal = document.getElementById("company__modal--id");
 var img = document.querySelectorAll(".company__img-item")
 var modalImg = document.getElementById("company__modal--img01");
 var captionText = document.getElementById("company__modal--caption");
 
-img.forEach(e=>e.addEventListener('click', function() {
-  document.querySelector('.header').style.position = 'absolute'
-  document.querySelector('.header').style.zIndex = '1'
-  document.querySelector('.header').style.transition = 'all 0s'
-  modal.style.display = "block";
-  modal.style.cursor = "pointer";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-  modalImg.style.cursor = 'default'
-  
+img.forEach(e => e.addEventListener('click', function() {
+    document.querySelector('.header').style.position = 'absolute'
+    document.querySelector('.header').style.zIndex = '1'
+    document.querySelector('.header').style.transition = 'all 0s'
+    modal.style.display = "block";
+    modal.style.cursor = "pointer";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    modalImg.style.cursor = 'default'
+
 }))
 
 var span = document.getElementsByClassName("company__modal--close")[0];
+if (span) {
+    span.onclick = function() {
+        modal.style.display = "none";
+        modalImg.style.cursor = 'pointer'
+        document.querySelector('.header').style.position = 'fixed'
+        document.querySelector('.header').style.zIndex = '10'
+        document.querySelector('.header').style.transition = 'all .3s linear'
 
-span.onclick = function() {
-  modal.style.display = "none";
-  modalImg.style.cursor = 'pointer'
-  document.querySelector('.header').style.position = 'fixed'
-  document.querySelector('.header').style.zIndex = '10'
-  document.querySelector('.header').style.transition = 'all .3s linear'
-
+    }
 }
-modal.onclick = function () {
-    modal.style.display = "none";
-    document.querySelector('.header').style.position = 'fixed'
-    document.querySelector('.header').style.zIndex = '10'
-    document.querySelector('.header').style.transition = 'all .3s linear'
+if (modal) {
+    modal.onclick = function() {
+        modal.style.display = "none";
+        document.querySelector('.header').style.position = 'fixed'
+        document.querySelector('.header').style.zIndex = '10'
+        document.querySelector('.header').style.transition = 'all .3s linear'
+    }
 }
