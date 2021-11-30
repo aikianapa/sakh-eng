@@ -54,59 +54,22 @@
                     <div class="col-lg-8">
 
                         <div class="projects">
-                            <div class="projects__list">
-                                <a href="/realty" class="projects__item">
-                                    <div class="projects__name">
-                                        Венера
+                            <div class="projects__list" id="projectsList">
+                                <wb-foreach wb="table=realty&sort=date:d&size=9&bind=page.realty">
+                                <a href="/realty/{{id}}/{{wbFurlGenerate({{name}})}}" class="projects__item">
+                                    <div class="projects__name overflow-ellipsis">
+                                        {{name}}
                                     </div>
-                                    <div class="projects__geo">
-                                        г.Южно-Сахалинск, ул.Детская, 6 А
-                                    </div>
-                                    <div class="projects__date">
-                                        <span>Ввод в эксплуатацию:</span> Март 2021
-                                    </div>
-                                    <img src="/assets/img/realty/realty_1.png" alt="жилой комплекс"
-                                        class="projects__img">
-                                </a>
-                                <a href="/realty" class="projects__item">
-                                    <div class="projects__name">
-                                        Модерн
-                                    </div>
-                                    <div class="projects__geo">
-                                        г.Южно-Сахалинск, ул.Детская, 6 А
+                                    <div class="projects__geo overflow-ellipsis">
+                                        {{address}}
                                     </div>
                                     <div class="projects__date">
-                                        <span>Ввод в эксплуатацию:</span> Март 2021
+                                        <span>Ввод в эксплуатацию:</span> {{deadline}}
                                     </div>
-                                    <img src="/assets/img/realty/realty_2.png" alt="жилой комплекс"
+                                    <img src="/thumbc/400x300/src{{cover.0.img}}" alt="{{name}}"
                                         class="projects__img">
                                 </a>
-                                <a href="/realty" class="projects__item">
-                                    <div class="projects__name">
-                                        Венера
-                                    </div>
-                                    <div class="projects__geo">
-                                        г.Южно-Сахалинск, ул.Детская, 6 А
-                                    </div>
-                                    <div class="projects__date">
-                                        <span>Ввод в эксплуатацию:</span> Март 2021
-                                    </div>
-                                    <img src="/assets/img/realty/realty_3.png" alt="жилой комплекс"
-                                        class="projects__img">
-                                </a>
-                                <a href="/realty" class="projects__item">
-                                    <div class="projects__name">
-                                        Модерн
-                                    </div>
-                                    <div class="projects__geo">
-                                        г.Южно-Сахалинск, ул.Детская, 6 А
-                                    </div>
-                                    <div class="projects__date">
-                                        <span>Ввод в эксплуатацию:</span> Март 2021
-                                    </div>
-                                    <img src="/assets/img/realty/realty_4.png" alt="жилой комплекс"
-                                        class="projects__img">
-                                </a>
+                                </wb-foreach>
                             </div>
                         </div>
                     </div>

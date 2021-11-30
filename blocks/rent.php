@@ -30,25 +30,15 @@
                     <div class="col-lg-8">
 
                         <div class="projects projects__rent">
-                            <div class="projects__list">
-                                <a href="/machinery-1" class="projects__item">
+                            <div class="projects__list" id="projectsList">
+                                <wb-foreach wb="table=rent&sort=_created:d&bind=page.rent">
+                                <a href="/rent/{{id}}/{{wbFurlGenerate({{name}})}}" class="projects__item">
                                     <div class="projects__name">
-                                        Licronic 974
+                                        {{name}}
                                     </div>
-                                    <img src="assets/img/rent/rent_1.png" class="projects__img">
+                                    <img src="/thumbc/400x300/src/{{attaches.0.img}}" class="projects__img" alt="{{attaches.0.alt}}">
                                 </a>
-                                <a href="/machinery-1" class="projects__item">
-                                    <div class="projects__name">
-                                        Hamm
-                                    </div>
-                                    <img src="assets/img/rent/rent_2.png" class="projects__img">
-                                </a>
-                                <a href="/machinery-1" class="projects__item">
-                                    <div class="projects__name">
-                                        Кран "Машека"
-                                    </div>
-                                    <img src="assets/img/rent/rent_3.png" class="projects__img">
-                                </a>
+                                </wb-foreach>
                             </div>
                         </div>
                     </div>
