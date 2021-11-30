@@ -7,41 +7,29 @@
                     <div class="back">
                         <a href="/projects" class="back__arrow"></a>
                         <h1 class="back__title">
-                            Строительная лаборатория
+                            {{_parent.header}}
                         </h1>
                     </div>
                     <div class="laboratory__wrapper">
-                        <p class="laboratory__text">
-                            Испытательная лаборатория АО "Сахалин-Инжиниринг" получила аккредитацию 07 августа 2019
-                            года. В ней можно заказать испытания прочности бетонных образцов на сжатие, по ударному
-                            импульсу, а также по отрыву со скалыванием. Также оказываются услуги по измерению толщины
-                            покрытий декоративных, лакокрасочных и других защитных покрытий на любом токопроводящем
-                            основании.
-                        </p>
-                        <p class="laboratory__text">
-                            Протоколы таких испытаний могут быть использованы для исполнительной документации, а также в
-                            целях обследований и проведения каких-либо экспертиз.
-                        </p>
+                        {{text}}
                         <div class="laboratory__img-wrap">
-                            <img src="assets/img/laboratory/laboratory_1.png" alt="laboratory"
-                                class="laboratory__img laboratory__img--1">
-                            <img src="assets/img/laboratory/laboratory_2.png" alt="laboratory"
-                                class="laboratory__img laboratory__img--2">
-                            <img src="assets/img/laboratory/laboratory_3.png" alt="laboratory"
-                                class="laboratory__img laboratory__img--3">
+                            <wb-foreach wb="from=images&limit=3&tpl=false">
+                            <img src="/thumbc/120x120/src{{img}}" alt="laboratory"
+                                class="laboratory__img laboratory__img--{{_ndx}}">
+                            </wb-foreach>
                         </div>
                         <h2 class="laboratory__subtitle">
-                            Контакты строительной лаборатории:
+                            {{title}}
                         </h2>
                         <div class="laboratory__contacts">
-                            <a href="tel:4242456457" class="laboratory__contact">
-                                (4242) 456 457
+                            <a href="tel:+{{wbDigitsOnly({{phone1}})}}" wb-if="'{{phone1}}'>''" class="laboratory__contact">
+                                {{phone1}}
                             </a>
-                            <a href="tel:+79841390755" class="laboratory__contact">
-                                +7 984 139 07 55
+                            <a href="tel:+{{wbDigitsOnly({{phone2}})}}" wb-if="'{{phone2}}'>''" class="laboratory__contact">
+                                {{phone2}}
                             </a>
-                            <a href="mailto:lab@sakh-eng.ru" class="laboratory__contact">
-                                lab@sakh-eng.ru
+                            <a href="mailto:lab@sakh-eng.ru" wb-if="'{{email}}'>''" class="laboratory__contact">
+                                {{email}}
                             </a>
                         </div>
                     </div>
@@ -49,8 +37,38 @@
             </section>
         </div>
     </div>
+    <wb-jq wb="$dom->find('.laboratory__wrapper > p')->addClass('laboratory__text')" />
 </view>
 
 <edit header="Страница Лаборатория">
 <div><wb-module wb="module=yonger&mode=edit&block=common.inc" /></div>
+
+    <div class="form-group row">
+        <label class="col-auto">Текст</label>
+        <div class="col">
+        <input class="form-control" type="text" name="title" placeholder="Текст перед телефонами">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-4">
+            <input type="phone" name="phone1" class="form-control" wb-mask="+7 (9999) 999-999" placeholder="Телефон #1" >
+        </div>
+        <div class="col-sm-4">
+            <input type="phone" name="phone2" class="form-control" wb-mask="+7 (9999) 999-999" placeholder="Телефон #2" >
+        </div>
+        <div class="col-sm-4">
+            <input type="email" name="email" class="form-control" placeholder="Эл.почта" >
+        </div>
+    </div>
+
+        <div class="form-group row">
+            <div class="col-12">
+                <wb-module wb="{'module':'jodit'}" name="text"></wb-module>
+            </div>
+        </div>
+<div class="form-group row">
+        <div class="col-12">
+                <wb-module wb="module=filepicker&mode=multiple&width=120&height=120" wb-path="/uploads/laboratory" name="images"></wb-module>
+            </div>
+            </div>
 </edit>

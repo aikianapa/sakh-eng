@@ -66,8 +66,7 @@
 
     <div class="form-group row align-items-center">
         <div class="col">
-            <wb-module wb="module=filepicker&mode=single&width=1366&&height=450" wb-path="/uploads/awards/"
-                name="image"></wb-module>
+            <wb-module wb="module=filepicker&mode=single&width=1366&&height=450" wb-path="/uploads/awards/" name="image"></wb-module>
         </div>
     </div>
 

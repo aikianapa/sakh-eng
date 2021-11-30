@@ -9,10 +9,10 @@
                         <div class="row align-items-center">
                             <div class="col-md-auto text-right">
                                 <div class="job__contacts">
-                                    Все вопросы по телефонам:
-                                    <a class="job__tel" href="tel:+74242456483">+7 (4242) 456–483</a>
-                                    <a class="job__tel" href="tel:+74242456026">+7 (4242) 456-026</a>
-                                    <a class="job__tel" href="http://se.idees.ru/ea@sakh-eng.ru">ea@sakh-eng.ru</a>
+                                    {{text}}
+                                    <a class="job__tel" wb-if="'{{phone1}}'>''" href="tel:+{{wbDigitsOnly({{phone1}})}}">{{phone1}}</a>
+                                    <a class="job__tel" wb-if="'{{phone2}}'>''" href="tel:+{{wbDigitsOnly({{phone2}})}}">{{phone2}}</a>
+                                    <a class="job__tel" wb-if="'{{email}}'>''" href="mailto:{{email}}">{{email}}</a>
                                 </div>
                             </div>
 
@@ -54,14 +54,34 @@
     <div>
         <wb-module wb="module=yonger&mode=edit&block=common.inc" />
     </div>
+
+    <div class="form-group row">
+        <label class="col-auto">Текст</label>
+        <div class="col">
+        <input class="form-control" type="text" name="text" placeholder="Текст перед телефонами">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-4">
+            <input type="phone" name="phone1" class="form-control" wb-mask="+7 (9999) 999-999" placeholder="Телефон #1" >
+        </div>
+        <div class="col-sm-4">
+            <input type="phone" name="phone2" class="form-control" wb-mask="+7 (9999) 999-999" placeholder="Телефон #2" >
+        </div>
+        <div class="col-sm-4">
+            <input type="email" name="email" class="form-control" placeholder="Эл.почта" >
+        </div>
+    </div>
+
+
     <wb-multiinput name="job">
-        <div class="col">
-            <input type="datepicker" name="date" class="form-control" wb="module=datetimepicker" placeholder="Дата вакансии" >
+        <div class="col-sm-3">
+            <input type="datepicker" name="date" class="form-control tx-semibold" wb="module=datetimepicker" placeholder="Дата вакансии" >
         </div>
-        <div class="col">
-            <input type="text" name="vacancy" class="form-control" placeholder="Вакансия">
+        <div class="col-sm-9">
+            <input type="text" name="vacancy" class="form-control tx-semibold" placeholder="Вакансия">
         </div>
-        <div class="col">
+        <div class="col-12 mt-1">
             <textarea rows="auto" name="descr" class="form-control" placeholder="Подробно"></textarea>
         </div>
 
