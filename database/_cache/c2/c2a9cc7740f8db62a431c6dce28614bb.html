@@ -153,7 +153,7 @@ body.loaded .loader {
 <div class="loader">
     <div>
         <p>
-            <img src="assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
+            <img src="/assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
         </p>
         <br>
         <div class="lds-spinner">
@@ -299,108 +299,161 @@ body.loaded .loader {
                     <div class="row">
                         <div class="col-md-8">
                             <div class="news__main">
-                                <div class="news__item">
-                                    <img src="assets/img/news/news_1.png" alt="" class="news__img">
-                                    <p class="news__date">
-                                        17 Декабря 2020
-                                    </p>
-                                    <a href="post.html" class="news__name">
-                                        Сегодня была выставлена вилла стоимостью $1 млн
-                                    </a>
+                                <div class="row" id="newsList" data-pagination='{"count":5,"pages":1,"page":1,"size":"9"}' data-pages="1" data-page="1">
+                                    <div class="col-12">
+                                            <div class="news__item">
+                                                <img src="/uploads/news//id61a5f4c1img1bb8.png" alt="" class="news__img">
+                                                <p class="news__date">
+                                                    29 ноября 2021
+                                                </p>
+                                                <a href="/news/id61a5e44723e6/novyi-zakon-nakladyvaet-veto-na-grohot-groma-gryaduschih-izmenenii" class="news__name">
+                                                    Новый закон накладывает вето на грохот грома грядущих изменений!
+                                                </a>
+                                            </div>
+                                        </div>
+<div class="col-md-6">
+                                            <div class="news__item">
+                                                <img src="/uploads/news//id61a5f3cfimg0b70.png" alt="" class="news__img">
+                                                <p class="news__date">
+                                                    23 ноября 2021
+                                                </p>
+                                                <a href="/news/id61a5e5120248/tyajeloe-mashinostroenie-eto-vam-ne-pesn-svetlogo-buduschego" class="news__name">
+                                                    Тяжёлое машиностроение - это вам не песнь светлого будущего
+                                                </a>
+                                            </div>
+                                        </div>
+<div class="col-md-6">
+                                            <div class="news__item">
+                                                <img src="/uploads/news//id61a5f636img1a47.png" alt="" class="news__img">
+                                                <p class="news__date">
+                                                    20 ноября 2021
+                                                </p>
+                                                <a href="/news/id61a5e15d0181/na-dvadcatom-s-ezde-partii-prozvuchalo-porazitelnoe-zayavlenie-chastotnost-poiskovyh-zaprosov-rasstavila-vse-tochki-nad-i" class="news__name">
+                                                    На двадцатом съезде партии прозвучало поразительное заявление: частотность поисковых запросов расставила все точки над i!
+                                                </a>
+                                            </div>
+                                        </div>
+<div class="col-md-6">
+                                            <div class="news__item">
+                                                <img src="/uploads/news//id61a5f54aimg0740.png" alt="" class="news__img">
+                                                <p class="news__date">
+                                                    16 ноября 2021
+                                                </p>
+                                                <a href="/news/id61a54d0a13fe/segodnya-byla-vystavlena-villa-stoimostu-1-mln" class="news__name">
+                                                    Сегодня была выставлена вилла стоимостью $1 млн
+                                                </a>
+                                            </div>
+                                        </div>
+<div class="col-md-6">
+                                            <div class="news__item">
+                                                <img src="/uploads/news//id61a5f665img077b.png" alt="" class="news__img">
+                                                <p class="news__date">
+                                                     9 ноября 2021
+                                                </p>
+                                                <a href="/news/id61a5e36410a7/cena-voprosa-ne-vajna-kogda-byl-sorvan-doklad-predsedatelya-sovhoza" class="news__name">
+                                                    Цена вопроса не важна, когда был сорван доклад председателя совхоза
+                                                </a>
+                                            </div>
+                                        </div>
+<template id="newsList" data-params='{"table":"news","sort":"date:d","size":"9","bind":"page.news","target":"#newsList","pages":1,"route":{"controller":"form","mode":"show","form":"pages","item":"id61a3f46608f6","method":"GET","scheme":"http","hostname":"sakh.loc","port":"80","domain":"sakh.loc","zone":"loc","subdomain":"","host":"http:\/\/sakh.loc","uri":"\/news","query_string":"","query":[],"url":"http:\/\/sakh.loc\/news","path_app":"\/var\/www\/sakh.loc","path_engine":"\/var\/www\/sakh.loc\/engine","refferer":"http:\/\/sakh.loc\/news","lang":"ru","table":"pages","tpl":"page.php"},"locale":null}'>
+
+                                        <wb-var col="col-12" wb-if="'{{_idx}}'=='0'" else="col-md-6"></wb-var>
+                                        <div class="{{_var.col}}">
+                                            <div class="news__item">
+                                                <img src="%7B%7Bcover.0.img%7D%7D" alt="{{cover.0.alt}}" class="news__img">
+                                                <p class="news__date">
+                                                    {{datetext({{date}})}}
+                                                </p>
+                                                <a href="/news/%7B%7Bid%7D%7D/%7B%7BwbFurlGenerate(%7B%7Bheader%7D%7D)%7D%7D" class="news__name">
+                                                    {{header}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+</template><template id="newsList" data-params='{"_route":{"controller":"form","mode":"show","form":"pages","item":"id61a3f46608f6","method":"GET","scheme":"http","hostname":"sakh.loc","port":"80","domain":"sakh.loc","zone":"loc","subdomain":"","host":"http:\/\/sakh.loc","uri":"\/news","query_string":"","query":[],"url":"http:\/\/sakh.loc\/news","path_app":"\/var\/www\/sakh.loc","path_engine":"\/var\/www\/sakh.loc\/engine","refferer":"http:\/\/sakh.loc\/news","lang":"ru","table":"pages","tpl":"page.php","param":null},"_params":{"table":"news","sort":"date:d","size":"9","bind":"page.news","target":"#newsList","pages":1,"route":{"controller":"form","mode":"show","form":"pages","item":"id61a3f46608f6","method":"GET","scheme":"http","hostname":"sakh.loc","port":"80","domain":"sakh.loc","zone":"loc","subdomain":"","host":"http:\/\/sakh.loc","uri":"\/news","query_string":"","query":[],"url":"http:\/\/sakh.loc\/news","path_app":"\/var\/www\/sakh.loc","path_engine":"\/var\/www\/sakh.loc\/engine","refferer":"http:\/\/sakh.loc\/news","lang":"ru","table":"pages","tpl":"page.php"},"count":5,"tpl":"newsList","page":1},"url":"\/news","target":"#newsList","locale":null}'>
+            
+                                        <wb-var col="col-12" wb-if="'{{_idx}}'=='0'" else="col-md-6"></wb-var>
+                                        <div class="{{_var.col}}">
+                                            <div class="news__item">
+                                                <img src="%7B%7Bcover.0.img%7D%7D" alt="{{cover.0.alt}}" class="news__img">
+                                                <p class="news__date">
+                                                    {{datetext({{date}})}}
+                                                </p>
+                                                <a href="/news/%7B%7Bid%7D%7D/%7B%7BwbFurlGenerate(%7B%7Bheader%7D%7D)%7D%7D" class="news__name">
+                                                    {{header}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+        </template>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_2.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Сегодня была выставлена вилла стоимостью $1 млн
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_3.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Значимость этих проблем настолько очевидна, что н...
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_4.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Сегодня была выставлена вилла стоимостью $1 млн
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_5.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Значимость этих проблем настолько очевидна, что н...
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <nav class="col-xs-12 col-12 pos-bottom" data-tpl="#newsList">
+<ul class="pagination justify-content-center mb-40" id="fp_id61a5f88508c4" data-tpl="#newsList" style=";display:none;">
+    <li class="page-item" data-page="prev" disabled>
+        <a href="#prev" class="page-link prev" tabindex="-1">«</a>
+    </li>
+
+    <li class="page-item active">
+            <a class="page-link active" href="#1" data-page="1">1</a>
+        </li>
+
+    <li class="page-item" data-page="next" disabled>
+        <a href="#next" class="page-link next" tabindex="-1">»</a>
+    </li>
+    
+</ul>
+
+<script remove="" type="wbapp">
+    wbapp.loadScripts(['/engine/tags/pagination/pagination.js'],'pagination-js');
+</script>
+
+
+</nav>
+</div>
                         </div>
                         <div class="col-md-4">
-                            <div class="news__last">
+                            <div class="news__last" id="fp_id61a5f9650927">
                                 <div class="news__subtitle">
                                     Последние новости
                                 </div>
                                 <div class="news__item news__item--last">
                                     <div class="news__date news__date--last">
-                                        20 Декабря 2020
+                                        29 ноября 2021
                                     </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
+                                    <a href="/news/id61a5e44723e6/novyi-zakon-nakladyvaet-veto-na-grohot-groma-gryaduschih-izmenenii" class="news__name news__name--last">
+                                        Новый закон накладывает вето на грохот грома грядущих изменений!
                                     </a>
                                 </div>
-                                <div class="news__item news__item--last">
+<div class="news__item news__item--last">
                                     <div class="news__date news__date--last">
-                                        17 Декабря 2020
+                                        23 ноября 2021
                                     </div>
-                                    <a href="post.html" class="news__name news__name--last">
+                                    <a href="/news/id61a5e5120248/tyajeloe-mashinostroenie-eto-vam-ne-pesn-svetlogo-buduschego" class="news__name news__name--last">
+                                        Тяжёлое машиностроение - это вам не песнь светлого будущего
+                                    </a>
+                                </div>
+<div class="news__item news__item--last">
+                                    <div class="news__date news__date--last">
+                                        20 ноября 2021
+                                    </div>
+                                    <a href="/news/id61a5e15d0181/na-dvadcatom-s-ezde-partii-prozvuchalo-porazitelnoe-zayavlenie-chastotnost-poiskovyh-zaprosov-rasstavila-vse-tochki-nad-i" class="news__name news__name--last">
+                                        На двадцатом съезде партии прозвучало поразительное заявление: частотность поисковых запросов расставила все точки над i!
+                                    </a>
+                                </div>
+<div class="news__item news__item--last">
+                                    <div class="news__date news__date--last">
+                                        16 ноября 2021
+                                    </div>
+                                    <a href="/news/id61a54d0a13fe/segodnya-byla-vystavlena-villa-stoimostu-1-mln" class="news__name news__name--last">
                                         Сегодня была выставлена вилла стоимостью $1 млн
                                     </a>
                                 </div>
-                                <div class="news__item news__item--last">
+<div class="news__item news__item--last">
                                     <div class="news__date news__date--last">
-                                        20 Декабря 2020
+                                         9 ноября 2021
                                     </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
-                                    </a>
-                                </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        17 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Сегодня была выставлена вилла стоимостью $1 млн
-                                    </a>
-                                </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        20 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
+                                    <a href="/news/id61a5e36410a7/cena-voprosa-ne-vajna-kogda-byl-sorvan-doklad-predsedatelya-sovhoza" class="news__name news__name--last">
+                                        Цена вопроса не важна, когда был сорван доклад председателя совхоза
                                     </a>
                                 </div>
                             </div>
@@ -529,6 +582,51 @@ body.loaded .loader {
                     </div>
                     <button class="btn filter__btn">Применить</button>
                 </form>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="exampleModalCenter-resume" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- Is block: /_app_/blocks/footer.php -->
+<!-- Is block: /var/www/sakh.loc/blocks/modals.php -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form class="form">
+                    <div class="form__close" data-dismiss="modal">
+                        Закрыть
+                    </div>
+                    <h1 class="form__title">
+                        Форма отправки резюме
+                    </h1>
+                    <p class="form__descr">
+                        Заполните форму и отправьте нам резюме
+                    </p>
+                    <div class="form__wrapper">
+                        <label class="form__label" for="name">Введите свое имя*</label>
+                        <input class="form__input" name="name" required="" id="name" placeholder="Имя" type="text" done="">
+                        <label class="form__label" for="phone">Номер телефона*</label>
+                        <input class="form__input" name="phone" required="" id="phone" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
+                        <label class="form__label" for="theme">Тема обсуждения*</label>
+                        <label class="form__label" for="message">Сообщение</label>
+                        <input class="form__input" required="" id="message" placeholder="Напишите что хотели бы добавить...">
+                        <input type="file" name="" value="" done="">
+                    </div>
+                    <button class="form__btn">
+                        Отправить заявку
+                    </button>
+                </form>
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
             </div>
         </div>
     </div>

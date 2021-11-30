@@ -6,67 +6,26 @@
             <section class="news">
                 <div class="container">
                     <h1 class="news__title">
-                        Новости
+                        {{_parent.header}}
                     </h1>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="news__main">
-                                <div class="news__item">
-                                    <img src="assets/img/news/news_1.png" alt="" class="news__img">
-                                    <p class="news__date">
-                                        17 Декабря 2020
-                                    </p>
-                                    <a href="post.html" class="news__name">
-                                        Сегодня была выставлена вилла стоимостью $1 млн
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_2.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Сегодня была выставлена вилла стоимостью $1 млн
-                                            </a>
+                                <div class="row" id="newsList">
+                                    <wb-foreach wb="table=news&sort=date:d&size=9&bind=page.news">
+                                        <wb-var col="col-12" wb-if="'{{_idx}}'=='0'" else="col-md-6" />
+                                        <div class="{{_var.col}}">
+                                            <div class="news__item">
+                                                <img src="{{cover.0.img}}" alt="{{cover.0.alt}}" class="news__img">
+                                                <p class="news__date">
+                                                    {{datetext({{date}})}}
+                                                </p>
+                                                <a href="/news/{{id}}/{{wbFurlGenerate({{header}})}}" class="news__name">
+                                                    {{header}}
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_3.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Значимость этих проблем настолько очевидна, что н...
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_4.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Сегодня была выставлена вилла стоимостью $1 млн
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="news__item">
-                                            <img src="assets/img/news/news_5.png" alt="" class="news__img">
-                                            <p class="news__date">
-                                                17 Декабря 2020
-                                            </p>
-                                            <a href="post.html" class="news__name">
-                                                Значимость этих проблем настолько очевидна, что н...
-                                            </a>
-                                        </div>
-                                    </div>
+                                    </wb-foreach>
                                 </div>
                             </div>
                         </div>
@@ -75,46 +34,16 @@
                                 <div class="news__subtitle">
                                     Последние новости
                                 </div>
+                                <wb-foreach wb="table=news&sort=date:d&tpl=false&limit=5">
                                 <div class="news__item news__item--last">
                                     <div class="news__date news__date--last">
-                                        20 Декабря 2020
+                                        {{datetext({{date}})}}
                                     </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
+                                    <a href="/news/{{id}}/{{wbFurlGenerate({{header}})}}" class="news__name news__name--last">
+                                        {{header}}
                                     </a>
                                 </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        17 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Сегодня была выставлена вилла стоимостью $1 млн
-                                    </a>
-                                </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        20 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
-                                    </a>
-                                </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        17 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Сегодня была выставлена вилла стоимостью $1 млн
-                                    </a>
-                                </div>
-                                <div class="news__item news__item--last">
-                                    <div class="news__date news__date--last">
-                                        20 Декабря 2020
-                                    </div>
-                                    <a href="post.html" class="news__name news__name--last">
-                                        Значимость этих проблем настолько очевидна, что н...
-                                    </a>
-                                </div>
+                                </wb-foreach>
                             </div>
                         </div>
                     </div>

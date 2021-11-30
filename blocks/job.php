@@ -170,4 +170,16 @@
     <div>
         <wb-module wb="module=yonger&mode=edit&block=common.inc" />
     </div>
+    <wb-multiinput name="job">
+        <div class="col">
+            <input type="datepicker" name="date" class="form-control" wb="module=datetimepicker" placeholder="Дата вакансии" >
+        </div>
+        <div class="col">
+            <input type="text" name="vacancy" class="form-control" placeholder="Вакансия">
+        </div>
+        <div class="col">
+            <textarea rows="auto" name="descr" class="form-control" placeholder="Подробно"></textarea>
+        </div>
+
+    </wb-multiinput>
 </edit>

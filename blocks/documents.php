@@ -5,113 +5,19 @@
             <section class="documents">
                 <div class="container">
                     <div class="documents__header" style="position: absolute !important; width: 300px !important;">
-                        Документы
+                        {{_parent.header}}
                     </div>
                     <div class="documents__files">
-                        <a href="documents.html#" class="documents__file">
+                        <wb-foreach wb="from=docs&tpl=false">
+                        <a href="{{doc_file.0.img}}" download class="documents__file" wb-if="'{{{{doc_file.0.img}}}}'>''">
                             <div class="documents__name">
-                                Презентация компании
+                                {{doc_name}}
                             </div>
                             <div class="documents__download">
                                 Скачать
                             </div>
                         </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Проектная документация
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Разрешение на строительство
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Свидетельства, допуски, сертификации
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Разрешения на ввод объектов в эксплуатацию
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Проект договора долевого участия
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Аудиторские заключения и бухгалтерская отчетность
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Документы на землю
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Экспертиза проектной документации
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Заключения от соотв. застройщика и проектной декларации требованиям ФЗ
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Защита персональных данных, согласие на рассылку
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Разное
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
-                        <a href="documents.html#" class="documents__file">
-                            <div class="documents__name">
-                                Архив
-                            </div>
-                            <div class="documents__download">
-                                Скачать
-                            </div>
-                        </a>
+                        </wb-foreach>
                     </div>
                 </div>
             </section>
@@ -123,4 +29,14 @@
     <div>
         <wb-module wb="module=yonger&mode=edit&block=common.inc" />
     </div>
+    <wb-multiinput name="docs" class="align-items-center">
+        <div class="col-3">
+            <wb-module wb="module=filepicker&mode=single&width=50&&height=50&original=true" wb-path="/uploads/documents/" name="doc_file">
+            </wb-module>
+        </div>
+                <div class="col-9">
+                    <input class="form-control" type="text" name="doc_name" placeholder="Наименование">
+                </div>
+    </wb-multiinput>
+    <wb-jq wb="$dom->find('.wb-multiinput-row')->addClass('align-items-center')" />
 </edit>

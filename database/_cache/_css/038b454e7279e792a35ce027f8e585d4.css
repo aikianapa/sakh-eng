@@ -629,7 +629,8 @@ a:hover {
   position: relative;
   top: -50px;
   height: 450px;
-  background: url(../img/awards/awards_bg.png) center center / cover no-repeat;
+  background: url() center center / cover no-repeat;
+  background-image: var(--bg-image);
 }
 .awards__content {
   padding-left: 100px;
@@ -843,36 +844,21 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #FFF !important;
   color: #FFF !important;
 }
-.post__wrapper {
+.post .post__wrapper {
   max-width: 835px;
   margin: 0 auto;
 }
-.post__date {
-  font-size: 14px;
-  color: #ADB2BB;
-  margin-bottom: 16px;
-}
-.post__title {
-  font-size: 32px;
-  line-height: 1.4;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-.post__img {
+.post .post__wrapper img {
   margin-bottom: 50px;
   width: 100%;
   margin: auto auto 50px auto;
 }
-.post__content {
+.post .post__wrapper p {
   font-size: 16px;
   color: #ADB2BB;
   margin-bottom: 30px;
 }
-.post__subtitle {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-.post__video {
+.post .post__wrapper iframe {
   margin-bottom: 30px;
   position: absolute;
   top: 0;
@@ -881,31 +867,46 @@ input:-webkit-autofill:active {
   height: 100%;
   border: 0;
 }
-.post__items {
+.post .post__date {
+  font-size: 14px;
+  color: #ADB2BB;
+  margin-bottom: 16px;
+}
+.post .post__title {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.post .post__subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.post .post__items {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.post__item {
+.post .post__item {
   display: block;
   width: 255px;
   height: 236px;
 }
-.post__item img {
+.post .post__item img {
   width: 100%;
   height: auto;
 }
-.post__video-wrap {
+.post .post__video-wrap {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
   margin-bottom: 20px;
 }
-.post__promo {
+.post .post__promo {
   position: relative;
   margin-top: 30px;
 }
-.post__promo::before {
+.post .post__promo::before {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -915,16 +916,16 @@ input:-webkit-autofill:active {
   width: 77px;
   height: 31px;
 }
-.post__tel {
+.post .post__tel {
   margin: 50px 0 50px 0;
 }
-.post__tel a {
+.post .post__tel a {
   color: #FFF;
 }
-.post__declaration {
+.post .post__declaration {
   margin: 20px 0 20px 0;
 }
-.post__declaration a {
+.post .post__declaration a {
   color: #FFF;
 }
 .container--relative {
@@ -4117,4 +4118,8 @@ html {
   .project__img--1 {
     height: 300px;
   }
+}
+.text-break {
+  white-space: break-spaces;
+  white-space: pre-line;
 }

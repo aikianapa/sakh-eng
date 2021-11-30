@@ -153,7 +153,7 @@ body.loaded .loader {
 <div class="loader">
     <div>
         <p>
-            <img src="assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
+            <img src="/assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
         </p>
         <br>
         <div class="lds-spinner">
@@ -463,6 +463,51 @@ body.loaded .loader {
                     </div>
                     <button class="btn filter__btn">Применить</button>
                 </form>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="exampleModalCenter-resume" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- Is block: /_app_/blocks/footer.php -->
+<!-- Is block: /var/www/sakh.loc/blocks/modals.php -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form class="form">
+                    <div class="form__close" data-dismiss="modal">
+                        Закрыть
+                    </div>
+                    <h1 class="form__title">
+                        Форма отправки резюме
+                    </h1>
+                    <p class="form__descr">
+                        Заполните форму и отправьте нам резюме
+                    </p>
+                    <div class="form__wrapper">
+                        <label class="form__label" for="name">Введите свое имя*</label>
+                        <input class="form__input" name="name" required="" id="name" placeholder="Имя" type="text" done="">
+                        <label class="form__label" for="phone">Номер телефона*</label>
+                        <input class="form__input" name="phone" required="" id="phone" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
+                        <label class="form__label" for="theme">Тема обсуждения*</label>
+                        <label class="form__label" for="message">Сообщение</label>
+                        <input class="form__input" required="" id="message" placeholder="Напишите что хотели бы добавить...">
+                        <input type="file" name="" value="" done="">
+                    </div>
+                    <button class="form__btn">
+                        Отправить заявку
+                    </button>
+                </form>
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
             </div>
         </div>
     </div>
