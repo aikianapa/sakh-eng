@@ -139,7 +139,7 @@
 
                             <h6>Четвёртый экран</h6>
                             <div class="col-12">
-                                <input wb="module=yamap&height=400" name="position">
+                                <input wb="module=yamap" name="position" height="400">
                             </div>
                         </div>
                     </div>

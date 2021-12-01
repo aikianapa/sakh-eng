@@ -118,8 +118,7 @@
                         <div class="container" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">
                             <h2 class="project__map--title">Месторасположение</h2>
                             <div class="project__map">
-                                <iframe src="https://yandex.ru/map-widget/v1/-/CCUQQTRZgD" width="100%" frameborder="1"
-                                    allowfullscreen="true" style="position:relative;"></iframe>
+                                <div wb-module="yamap" geopos='{{position.0.geopos}}' center='{{position.0.geopos}}' zoom="{{position.0.zoom}}" title="{{position.0.address}}"></div>
                             </div>
                         </div>
                     </div>
