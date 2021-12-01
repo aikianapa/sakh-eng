@@ -555,26 +555,34 @@ sakh.slick = function() {
 
 
 // Активный пункт меню
-$(function() {
+var menuInit = function() {
     var location = window.location.href;
     var cur_url = location.split('/').pop();
-    var menuArr = ['company', 'search']
-    console.log(location);
-    console.log(cur_url);
-    menuArr = menuArr.filter(e => e !== cur_url)
-    $('.menu li').each(function() {
-        var link = $(this).find('a').attr('href');
+
+    $(".menu__center .dropdown_menu").hide();
+    $('#menu').find('a').each(function() {
+        var link = $(this).attr('href');
+        link = link.substr(1);
         if (cur_url == link) {
-            $(this).addClass('menu__tab--active');
-            $(`.menu__center__${cur_url}`).show(1000)
-            $(`.menu__center__${menuArr[0]}`).hide(500)
-        } else if (cur_url !== hideShowArr[0] && cur_url !== hideShowArr[1]) {
+            if ($(this).parents('.menu__center').length) {
+                let menu = $(this).parents('.dropdown_menu').data('id');
+                $('#menu .menu__tabs .menu__tab--' + menu).parent('li').addClass('menu__tab--active');
+            } else {
+                $(this).parent('li').addClass('menu__tab--active');
+            }
+        } else {
             $(`.menu__center--company`).show(500)
             $(`.menu__center--company > a`).show(500)
             $(`.dropdown_menu`).first().show(500)
         }
     });
-});
+
+    $(".menu__tab").mouseenter(function() {
+        $(".menu__center .dropdown_menu").hide(300);
+        $(".menu__center__" + $(this).data("id")).css('margin-left', this.offsetLeft + 15 + 'px');
+        $(".menu__center__" + $(this).data("id")).show(500)
+    })
+};
 
 $(document).ready(function() {
     $('body').addClass('body-home loaded');
@@ -583,6 +591,7 @@ $(document).ready(function() {
         $('.slick-list').removeClass('draggable')
         $('.slick-slide').css({ 'padding': '0' })
     }, 50)
+    menuInit();
 })
 $(window).resize(function() {
     if ($(window).width() < 767) {
@@ -598,23 +607,6 @@ $(window).resize(function() {
     }
 }).resize()
 
-
-$(document).ready(function() {
-
-
-
-    $(".menu__tab--search").mouseenter(function() {
-        $(".menu__center__search").show(500)
-        $(".menu__center__company").hide(500)
-    })
-
-    $(".menu__tab--company").mouseenter(function() {
-        $(".menu__center__company").show(500)
-        $(".menu__center__search").hide(500);
-    })
-
-
-});
 
 
 
