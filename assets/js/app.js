@@ -556,6 +556,13 @@ sakh.slick = function() {
 
 // Активный пункт меню
 var menuInit = function() {
+
+    $(".menu__tab").mouseenter(function() {
+        $(".menu__center .dropdown_menu").hide(300);
+        $(".menu__center__" + $(this).data("id")).css('margin-left', this.offsetLeft + 15 + 'px');
+        $(".menu__center__" + $(this).data("id")).show(500)
+    })
+
     var location = window.location.href;
     var cur_url = location.split('/').pop();
 
@@ -567,21 +574,12 @@ var menuInit = function() {
             if ($(this).parents('.menu__center').length) {
                 let menu = $(this).parents('.dropdown_menu').data('id');
                 $('#menu .menu__tabs .menu__tab--' + menu).parent('li').addClass('menu__tab--active');
+                $('#menu .menu__tabs .menu__tab--' + menu).trigger('mouseenter');
             } else {
                 $(this).parent('li').addClass('menu__tab--active');
             }
-        } else {
-            $(`.menu__center--company`).show(500)
-            $(`.menu__center--company > a`).show(500)
-            $(`.dropdown_menu`).first().show(500)
         }
     });
-
-    $(".menu__tab").mouseenter(function() {
-        $(".menu__center .dropdown_menu").hide(300);
-        $(".menu__center__" + $(this).data("id")).css('margin-left', this.offsetLeft + 15 + 'px');
-        $(".menu__center__" + $(this).data("id")).show(500)
-    })
 };
 
 $(document).ready(function() {
