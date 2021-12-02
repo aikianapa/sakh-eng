@@ -11,10 +11,10 @@
                                     Недвижимость
                                 </h1>
                             </div>
-                            <ul class="sidebar__list sidebar__list--realty">
-                                <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="/residential" class="sidebar__link">
-                                        Жилая недвижимость
+                            <ul class="sidebar__list sidebar__list--realty" wb-tree="item=realty&children=false">
+                                <li class="sidebar__item sidebar__item--realty">
+                                    <a href="/realty-{{id}}" class="sidebar__link">
+                                        {{name}}
                                     </a>
                                     <div class="sidebar__hidden ">
                                         <a href="/residential-map" class="sidebar-hidden__link ">
@@ -25,29 +25,6 @@
                                         </a>
                                     </div>
                                 </li>
-                                <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="/commercial" class="sidebar__link">
-                                        Коммерческая недвижимость
-                                    </a>
-                                    <div class="sidebar__hidden ">
-                                        <a href="/commercial-buy" class="sidebar-hidden__link ">
-                                            Покупка
-                                        </a>
-                                        <a href="/commercial-rent" class="sidebar-hidden__link ">
-                                            Аренда
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="/country" class="sidebar__link">
-                                        Загородная недвижимость
-                                    </a>
-                                </li>
-                                <li class="sidebar__item sidebar__item--realty ">
-                                    <a href="/parking" class="sidebar__link">
-                                        Паркинг
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +32,8 @@
 
                         <div class="projects">
                             <div class="projects__list" id="projectsList">
-                                <wb-foreach wb="table=realty&sort=date:d&size=9&bind=page.realty">
+                                <wb-var filter="category={{_route.view}}" wb-if="'{{_route.view}}'>''" />
+                                <wb-foreach wb="table=realty&sort=date:d&size=9&bind=page.realty" wb-filter="{{_var.filter}}">
                                 <a href="/realty/{{id}}/{{wbFurlGenerate({{name}})}}" class="projects__item">
                                     <div class="projects__name overflow-ellipsis">
                                         {{name}}

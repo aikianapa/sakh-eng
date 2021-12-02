@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>Наименование</th>
-                <th>Цена</th>
+                <th>Срок сдачи</th>
                 <th>Местонахождение</th>
                 <th></th>
             </tr>
@@ -22,7 +22,7 @@
                 wb-filter="{'login':'{{_sess.user.login}}' }">
                 <tr>
                     <td class="wd-auto">{{name}}</td>
-                    <td>{{price}} ₽/{{_var.period.{{period}}}}</td>
+                    <td>{{deadline}}</td>
                     <td class="wd-auto">{{address}}</td>
                     <td class="wd-150 tx-right">
                         <div class="custom-control custom-switch d-inline">

@@ -12,6 +12,7 @@
         <thead>
             <tr>
                 <th>Наименование</th>
+                <th>Категория</th>
                 <th>Цена</th>
                 <th>Местонахождение</th>
                 <th></th>
@@ -22,6 +23,7 @@
                 wb-filter="{'login':'{{_sess.user.login}}' }">
                 <tr>
                     <td class="wd-auto">{{name}}</td>
+                    <td wb-tree="item=realty&branch={{category}}&children=false"><span>{{name}}</span></td>
                     <td>{{price}} ₽/{{_var.period.{{period}}}}</td>
                     <td class="wd-auto">{{address}}</td>
                     <td class="wd-150 tx-right">
