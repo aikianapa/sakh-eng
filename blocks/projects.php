@@ -7,20 +7,17 @@
                         <div class="sidebar__title">
                             Тип объекта:
                         </div>
-                        <div class="search__tags">
-                            <div class="search__tag">Строящиеся</div>
-                            <div class="search__tag">Законченные</div>
-                            <div class="search__tag">Проектируемые</div>
+                        <div class="search__tags" wb-tree="item=realty&children=false">
+                            <div class="search__all" wb-if="'{{_idx}}'=='0'">Все</div>
+                            <div class="search__tag d-none" data-category="{{id}}">{{name}}</div>
                         </div>
                     </div>
                     <div class="col-auto">
                         <button class="search__btn" data-toggle="modal" data-target="#filter">Фильтровать по</button>
                     </div>
                 </div>
-                <div class="row">
-
-
-                    <wb-foreach wb="table=projects&sort=date:d&size=9&bind=page.realty">
+                <div class="row" id="projectsList">
+                    <wb-foreach wb="table=projects&sort=date:d&size=2&bind=page.projects" wb-filter="active=on">
                         <div class="col-md-6 col-lg-4">
                             <a href="/project/{{id}}/{{wbFurlGenerate({{name}})}}" class="search__card">
                                 <img src="/thumbc/400x400/src{{cover.0.img}}" alt="" class="search__img">
@@ -46,6 +43,7 @@
 
         </div>
     </div>
+    
 </view>
 
 <edit header="Страница - проекты">

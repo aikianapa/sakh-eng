@@ -1,6 +1,6 @@
 <html>
-<div class="modal fade effect-scale show removable" id="modalProjectEdit" data-backdrop="static" tabindex="-1"
-    role="dialog" aria-hidden="true">
+<div class="modal fade effect-scale show removable" id="modalProjectEdit" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header row">
@@ -10,14 +10,12 @@
                 <div class="col-7">
                     <h5 class='header'></h5>
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" name="active" id="{{_form}}SwitchItemActive"
-                            onchange="$('#{{_form}}ValueItemActive').prop('checked',$(this).prop('checked'));">
+                        <input type="checkbox" class="custom-control-input" name="active" id="{{_form}}SwitchItemActive" onchange="$('#{{_form}}ValueItemActive').prop('checked',$(this).prop('checked'));">
                         <label class="custom-control-label" for="{{_form}}SwitchItemActive">Отображать</label>
                     </div>
                 </div>
 
-                <i class="fa fa-close r-20 position-absolute cursor-pointer" data-dismiss="modal"
-                    aria-label="Close"></i>
+                <i class="fa fa-close r-20 position-absolute cursor-pointer" data-dismiss="modal" aria-label="Close"></i>
             </div>
             <div class="modal-body pd-20">
                 <form class="row" method="post" id="{{_form}}EditForm">
@@ -40,38 +38,37 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">{{_lang.name}}</label>
-                                            <input type="text" name="name" class="form-control"
-                                                placeholder="{{_lang.name}}" required>
+                                            <input type="text" name="name" class="form-control" placeholder="{{_lang.name}}" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-control-label">{{_lang.deadline}}</label>
-                                            <input type="text" name="deadline" class="form-control"
-                                                placeholder="{{_lang.deadline}}">
+                                            <input type="text" name="deadline" class="form-control" placeholder="{{_lang.deadline}}">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="form-control-label">{{_lang.category}}</label>
+                                    <select wb-tree="item=realty&children=false" name="category" class="form-control" required>
+                                        <option value="{{id}}">{{name}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label class="form-control-label">{{_lang.address}}</label>
-                                    <input type="text" name="address" class="form-control"
-                                        placeholder="{{_lang.address}}">
+                                    <input type="text" name="address" class="form-control" placeholder="{{_lang.address}}">
                                 </div>
 
                                 <ul class="nav nav-tabs" id="{{form}}Tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab"
-                                            href="#tab-{{form}}About" role="tab" aria-selected="true">О проекте</a>
+                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab-{{form}}About" role="tab" aria-selected="true">О проекте</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab-{{form}}Infr"
-                                            role="tab" aria-selected="false">Инфраструктура</a>
+                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab-{{form}}Infr" role="tab" aria-selected="false">Инфраструктура</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab-{{form}}Plan"
-                                            role="tab" aria-selected="false">Генплан</a>
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab-{{form}}Plan" role="tab" aria-selected="false">Генплан</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab-{{form}}Space"
-                                            role="tab" aria-selected="false">Пространство</a>
+                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab-{{form}}Space" role="tab" aria-selected="false">Пространство</a>
                                     </li>
 
                                 </ul>
@@ -96,19 +93,16 @@
                             <div class="col-12">
                                 <wb-multiinput name="plates">
                                     <div class="col-sm-3">
-                                        <wb-module wb="module=filepicker&mode=single&width=300&&height=200"
-                                            wb-path="/uploads/projects/" name="pl_bkg">
+                                        <wb-module wb="module=filepicker&mode=single&width=300&&height=200" wb-path="/uploads/projects/" name="pl_bkg">
                                         </wb-module>
                                     </div>
                                     <div class="col-sm-9 pl-2">
                                         <div class="form-group row pt-2 pl-2">
                                             <div class="col-12 mb-1">
-                                                <input type="text" name="pl_title" class="form-control tx-semibold"
-                                                    placeholder="Заголовок">
+                                                <input type="text" name="pl_title" class="form-control tx-semibold" placeholder="Заголовок">
                                             </div>
                                             <div class="col-12">
-                                                <textarea name="pl_text" rows="auto" class="form-control"
-                                                    placeholder="Текст"></textarea>
+                                                <textarea name="pl_text" rows="auto" class="form-control" placeholder="Текст"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -120,18 +114,15 @@
                                     <div class="col-sm-9 pl-2">
                                         <div class="form-group row pt-2 pl-2">
                                             <div class="col-12 mb-1">
-                                                <input type="text" name="b3_title" class="form-control tx-semibold"
-                                                    placeholder="Заголовок">
+                                                <input type="text" name="b3_title" class="form-control tx-semibold" placeholder="Заголовок">
                                             </div>
                                             <div class="col-12">
-                                                <textarea name="b3_text" rows="auto" class="form-control"
-                                                    placeholder="Текст"></textarea>
+                                                <textarea name="b3_text" rows="auto" class="form-control" placeholder="Текст"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <wb-module wb="module=filepicker&mode=single&width=300&&height=200"
-                                            wb-path="/uploads/projects/" name="b3_bkg">
+                                        <wb-module wb="module=filepicker&mode=single&width=300&&height=200" wb-path="/uploads/projects/" name="b3_bkg">
                                         </wb-module>
                                     </div>
                                 </div>
@@ -151,19 +142,20 @@
         </div>
     </div>
 </div>
-                    <script>
-                    $('#projectsEditaccordion').accordion({
-                        heightStyle: 'content'
-                    });
-                    </script>
+<script>
+    $('#projectsEditaccordion').accordion({
+        heightStyle: 'content'
+    });
+</script>
 <wb-lang>
     [ru]
-    name = Наименование
+    name = Наименование 
     deadline = Ввод в эксплуатацию
     text = Текст
     price = Цена
     info = Информация
     address = Адрес местонахождения
+    category = Категория
 </wb-lang>
 
 </html>

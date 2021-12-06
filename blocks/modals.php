@@ -57,8 +57,7 @@
             </div>
         </div>
     </div>
-    
-    <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-hidden="true" wb-if="'{{_route.uri}}'=='/projects'">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
                 <form class="filter">
@@ -71,25 +70,13 @@
                     <div class="filter__descr">
                         Выберите категории которые хотите видеть в результатах поиска.
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox" wb-tree="item=realty&children=false">
                         <label class="checkbox__item">
-                            <input type="checkbox">
-                            <span class="checkmark">Жилая недвижимость</span>
-                        </label>
-                        <label class="checkbox__item">
-                            <input type="checkbox">
-                            <span class="checkmark">Коммерческая недвижимость</span>
-                        </label>
-                        <label class="checkbox__item">
-                            <input type="checkbox">
-                            <span class="checkmark">Загородная недвижимость</span>
-                        </label>
-                        <label class="checkbox__item">
-                            <input type="checkbox">
-                            <span class="checkmark">Машиноместа</span>
+                            <input type="checkbox" name="{{id}}">
+                            <span class="checkmark">{{name}}</span>
                         </label>
                     </div>
-                    <button class="btn filter__btn">Применить</button>
+                    <button type="button" class="btn filter__btn">Применить</button>
                 </form>
             </div>
         </div>
