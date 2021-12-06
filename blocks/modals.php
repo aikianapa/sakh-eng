@@ -60,7 +60,7 @@
     <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-hidden="true" wb-if="'{{_route.uri}}'=='/projects'">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-                <form class="filter">
+                <form class="filter" action="/projects">
                     <div class="filter__close" data-dismiss="modal">
                         Закрыть
                     </div>
@@ -70,9 +70,11 @@
                     <div class="filter__descr">
                         Выберите категории которые хотите видеть в результатах поиска.
                     </div>
+                    <wb-var filter="{{_post.filter}}" />
                     <div class="checkbox" wb-tree="item=realty&children=false">
                         <label class="checkbox__item">
-                            <input type="checkbox" name="{{id}}">
+                            <wb-var checked='checked'  wb-if='in_array({{id}},{{_var.filter.category["$in"]}})' else=''/>
+                            <input type="checkbox" name="{{id}}" class="{{_var.checked}}">
                             <span class="checkmark">{{name}}</span>
                         </label>
                     </div>

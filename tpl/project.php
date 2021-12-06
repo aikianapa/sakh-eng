@@ -104,7 +104,7 @@
                                         {{b3_text}}
                                     </p>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6" wb-if="'{{b3_bkg.0.img}}'>''">
                                     <img src="{{b3_bkg.0.img}}" alt="project"
                                         class=" project__img--1">
                                 </div>

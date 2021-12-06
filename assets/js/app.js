@@ -587,39 +587,21 @@ var filterInit = function() {
     let $form = $modal.find('form.filter');
     let $button = $form.find('.filter__btn');
     let list = '#projectsList';
+    $form.find("input.checked").prop('checked', true);
     $button.click(function() {
         let filter = $form.serializeJson();
         let fp = { active: 'on', category: { '$in': [] } };
         $.each(filter, function(fld, val) {
             val !== undefined && val == 'on' ? fp.category.$in.push(fld) : null;
         })
-        $(list).hide();
-        wbapp.renderFilter(list, fp);
-        $modal.modal('hide');
+        fp.category.$in.length ? null : delete fp.category;
+        wbapp.redirectPost('/projects', { filter: fp, target: list });
     })
-    $(list).on('wb-ajax-done', function(ev, params) {
-        setTimeout(function() {
-            if (params.target === list && params.filter !== undefined) {
-                $(list).show(100);
-                $('.search__tags .search__all').removeClass('d-none');
-                $('.search__tags .search__tag').addClass('d-none');
-                $.each(params.filter.category.$in, function(key, val) {
-                    $('.search__tags .search__tag[data-category="' + val + '"]').removeClass('d-none');
-                    $('.search__tags .search__all').addClass('d-none');
-                });
-            }
-        }, 1);
-    });
+
     $('.search__tags').delegate('.search__tag', 'click', function(ev) {
-        let tpl = wbapp.tpl(list);
         let cat = $(this).data('category');
-        let fp = tpl.params.filter;
-        $.each(fp.category.$in, function(key, val) {
-            if (val == cat) delete fp.category.$in[key];
-        });
-        $(this).addClass('d-none');
         $form.find('[name="' + cat + '"]').prop('checked', false);
-        wbapp.renderFilter(list, fp);
+        $button.trigger('click');
         ev.preventDefault();
     });
 }

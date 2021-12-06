@@ -7,20 +7,22 @@
                         <div class="sidebar__title">
                             Тип объекта:
                         </div>
+                        <wb-var filter="{{_post.filter}}" />
                         <div class="search__tags" wb-tree="item=realty&children=false">
-                            <div class="search__all" wb-if="'{{_idx}}'=='0'">Все</div>
-                            <div class="search__tag d-none" data-category="{{id}}">{{name}}</div>
+                            <div class="search__all" wb-if="'{{_var.filter.category}}'=='' && '{{_idx}}'=='0'">Все</div>
+                            <div class="search__tag" data-category="{{id}}" wb-if='in_array({{id}},{{_var.filter.category["$in"]}})'>{{name}}</div>
                         </div>
                     </div>
                     <div class="col-auto">
                         <button class="search__btn" data-toggle="modal" data-target="#filter">Фильтровать по</button>
                     </div>
                 </div>
+
                 <div class="row" id="projectsList">
-                    <wb-foreach wb="table=projects&sort=date:d&size=2&bind=page.projects" wb-filter="active=on">
+                    <wb-foreach wb="table=projects&sort=date:d&size=60&bind=page.projects" wb-filter="active=on">
                         <div class="col-md-6 col-lg-4">
                             <a href="/project/{{id}}/{{wbFurlGenerate({{name}})}}" class="search__card">
-                                <img src="/thumbc/400x400/src{{cover.0.img}}" alt="" class="search__img">
+                                <img src="/thumbc/400x400/src{{cover.0.img}}" width="400" height="400" alt="{{name}}" class="search__img">
                                 <div class="search__card-wrap">
                                     <span class="search__descr">
                                         <div class="projects__name overflow-ellipsis">
