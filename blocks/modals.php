@@ -99,13 +99,14 @@
                     </p>
                     <div class="form__wrapper">
                         <label class="form__label" for="name">Введите свое имя*</label>
-                        <input class="form__input" name="name" required="" id="name" placeholder="Имя" type="text" done="">
+                        <input class="form__input" name="name" required="" id="name" data-label="Имя" placeholder="Имя" type="text" done="">
                         <label class="form__label" for="phone">Номер телефона*</label>
-                        <input class="form__input" name="phone" required="" id="phone" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
-                        <label class="form__label" for="theme">Тема обсуждения*</label>
+                        <input class="form__input" name="phone" required="" id="phone" data-label="Телефон" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
+                        <label class="form__label" for="subj">Тема обсуждения*</label>
+                        <input class="form__input" name="subject" required="" id="subj" placeholder="Тема" type="text" data-label="Тема" done="">
                         <label class="form__label" for="message">Сообщение</label>
-                        <input class="form__input" required="" id="message" placeholder="Напишите что хотели бы добавить...">
-                        <input type="file" name="" value="" done="">
+                        <input class="form__input" required="" id="message" data-label="Cjj,otybt" placeholder="Напишите что хотели бы добавить...">
+                        <input type="file" name="attach" value="" done="" data-label="Файл">
                     </div>
                     <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
