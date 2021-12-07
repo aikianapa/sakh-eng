@@ -37,6 +37,7 @@
                             </label>
                         </div>
                     </div>
+                    <input type="hidden" name="url" data-label="Страница отправки" value="{{_route.url}}" >
                     <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
                     </button>
@@ -78,6 +79,7 @@
                             <span class="checkmark">{{name}}</span>
                         </label>
                     </div>
+                    <input type="hidden" name="url" data-label="Страница отправки" value="{{_route.url}}" >
                     <button type="button" class="btn filter__btn">Применить</button>
                 </form>
             </div>
@@ -108,6 +110,7 @@
                         <input class="form__input" required="" id="message" name="message" data-label="Сообщение" placeholder="Напишите что хотели бы добавить...">
                         <input type="file" name="_attach" done="" data-label="Файл" data-base64>
                     </div>
+                    <input type="hidden" name="url" data-label="Страница отправки" value="{{_route.url}}" >
                     <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
                     </button>
