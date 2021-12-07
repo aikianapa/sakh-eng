@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-auto">
-                    <a href="//">
+                    <a href="/">
                         <img src="/assets/img/icons/header_logo.svg" width="298" height="60" alt="logotype" class="header__logo">
                     </a>
                 </div>

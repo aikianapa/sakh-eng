@@ -606,6 +606,22 @@ var filterInit = function() {
     });
 }
 
+$(document).on('wb-verify-false', function(ev, el, error) {
+    wbapp.toast('Ошибка', error, { bgcolor: 'danger', color: 'white' });
+    $('.toast-body').css('background', '#313e54');
+    $('.toast-header h6').css('color', '#FFFFFF');
+})
+
+$(document).on('wb-ajax-done', function(ev, params) {
+    if (params.url == '/ajax/mail') {
+        ev.target.reset();
+        $(ev.target).parents('.modal').modal('hide');
+        wbapp.toast('Успешно', 'Ваше сообщение отправлено', { bgcolor: 'success', color: 'white' });
+        $('.toast-body').css('background', '#313e54');
+        $('.toast-header h6').css('color', '#FFFFFF');
+    }
+});
+
 
 $(document).ready(function() {
     $('body').addClass('body-home loaded');

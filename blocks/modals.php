@@ -14,30 +14,30 @@
                     </p>
                     <div class="form__wrapper">
                         <label class="form__label" for="name">Введите свое имя*</label>
-                        <input class="form__input" name="name" required="" id="name" placeholder="Имя" type="text" done="">
+                        <input class="form__input" name="name" required="" id="name" data-label="Имя" placeholder="Имя" type="text" done="">
                         <label class="form__label" for="phone">Номер телефона*</label>
-                        <input class="form__input" name="phone" required="" id="phone" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
+                        <input class="form__input" name="phone" required="" id="phone" data-label="Телефон" placeholder="+7 ( _ _ _ _ ) _ _ _  _ _ _" done="">
                         <label class="form__label" for="theme">Тема обсуждения*</label>
-                        <select class="form__select">
-                            <option class="form__option">Консультация</option>
-                            <option class="form__option">Покупка</option>
-                            <option class="form__option">Аренда</option>
+                        <select class="form__select" name="reason" data-label="Повод">
+                            <option class="form__option" value="Консультация">Консультация</option>
+                            <option class="form__option" value="Покупка">Покупка</option>
+                            <option class="form__option" value="Аренда">Аренда</option>
                             </select>
                         <label class="form__label" for="message">Сообщение</label>
-                        <input class="form__input" required="" id="message" placeholder="Напишите что хотели бы добавить...">
+                        <input class="form__input" required="" name="message" id="message" data-label="Сообщение" placeholder="Напишите что хотели бы добавить...">
                         <div class="сheckbox">
                             <label class="checkbox__item checkbox__item--small">
-                                <input type="checkbox" required="">
+                                <input type="checkbox" required name="policy" data-label="Согласие с условиями" required>
                                 <span class="checkmark">Согласен с условиями </span>
                                 <a href="/privacy" class="checkbox__link" target="_blank">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
-                                <input type="checkbox">
+                                <input type="checkbox" name="subscribe" data-label="Подписка на рассылку">
                                 <span class="checkmark">Информационная рассылка</span>
                             </label>
                         </div>
                     </div>
-                    <button class="form__btn">
+                    <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
                     </button>
                 </form>
@@ -105,7 +105,7 @@
                         <label class="form__label" for="subj">Тема обсуждения*</label>
                         <input class="form__input" name="subject" required="" id="subj" placeholder="Тема" type="text" data-label="Тема" done="">
                         <label class="form__label" for="message">Сообщение</label>
-                        <input class="form__input" required="" id="message" id="name" data-label="Сообщение" placeholder="Напишите что хотели бы добавить...">
+                        <input class="form__input" required="" id="message" name="message" data-label="Сообщение" placeholder="Напишите что хотели бы добавить...">
                         <input type="file" name="_attach" done="" data-label="Файл" data-base64>
                     </div>
                     <button class="form__btn" type="button" data-ajax="/ajax/mail">
