@@ -107,7 +107,7 @@
                         <input class="form__input" required="" id="message" placeholder="Напишите что хотели бы добавить...">
                         <input type="file" name="" value="" done="">
                     </div>
-                    <button class="form__btn">
+                    <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
                     </button>
                 </form>

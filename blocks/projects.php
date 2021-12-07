@@ -38,6 +38,11 @@
                                 </div>
                             </a>
                         </div>
+                        <wb-empty>
+                            <div class="col">
+                                <p>К сожалению, ничего не найдено.</p>
+                            </div>
+                        </wb-empty>
                     </wb-foreach>
                 </div>
             </div>
