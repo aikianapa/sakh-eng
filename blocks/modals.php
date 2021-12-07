@@ -29,7 +29,7 @@
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox" required="">
                                 <span class="checkmark">Согласен с условиями </span>
-                                <a href="privacy.html" class="checkbox__link">политики конфиденциальности</a>
+                                <a href="/privacy" class="checkbox__link" target="_blank">политики конфиденциальности</a>
                             </label>
                             <label class="checkbox__item checkbox__item--small">
                                 <input type="checkbox">
@@ -105,8 +105,8 @@
                         <label class="form__label" for="subj">Тема обсуждения*</label>
                         <input class="form__input" name="subject" required="" id="subj" placeholder="Тема" type="text" data-label="Тема" done="">
                         <label class="form__label" for="message">Сообщение</label>
-                        <input class="form__input" required="" id="message" data-label="Cjj,otybt" placeholder="Напишите что хотели бы добавить...">
-                        <input type="file" name="attach" value="" done="" data-label="Файл">
+                        <input class="form__input" required="" id="message" id="name" data-label="Сообщение" placeholder="Напишите что хотели бы добавить...">
+                        <input type="file" name="_attach" done="" data-label="Файл" data-base64>
                     </div>
                     <button class="form__btn" type="button" data-ajax="/ajax/mail">
                         Отправить заявку
